@@ -1,0 +1,2630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>The Lookbook — JD COUTURE | Wear Elegance</title>
+<meta name="description" content="The JD COUTURE Lookbook. Four chapters of couture tailoring from California, Ogbomoso — Midnight Gold, Ivory Hours, Owambe and Studio. Shop the look on WhatsApp." />
+<meta name="theme-color" content="#111111" />
+<meta property="og:title" content="The Lookbook — JD COUTURE" />
+<meta property="og:description" content="Four chapters. One standard. Shop the look on WhatsApp." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   00 · TOKENS & RESET
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --black:#111111;
+  --black-2:#0a0a0a;
+  --gold:#C6A66B;
+  --gold-dim:#9c8151;
+  --gold-light:#e8d4a8;
+  --ivory:#F7F3EB;
+  --espresso:#49382E;
+  --taupe:#B8B0A4;
+
+  --ease:cubic-bezier(.19,1,.22,1);
+  --ease-io:cubic-bezier(.65,0,.35,1);
+
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Jost',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+
+  --hdr-h:82px;
+  --gut:clamp(18px,4vw,64px);
+  --sec-pad:clamp(56px,8vw,120px);
+}
+
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+
+body{
+  background:var(--black);color:var(--ivory);
+  font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.65;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  min-height:100vh;
+}
+body.is-locked{overflow:hidden}
+
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ul{list-style:none}
+input,textarea,select{font:inherit;color:inherit;background:none}
+
+::selection{background:var(--gold);color:#111}
+
+::-webkit-scrollbar{width:9px}
+::-webkit-scrollbar-track{background:#0a0a0a}
+::-webkit-scrollbar-thumb{background:#2a2a2a;border-radius:9px}
+::-webkit-scrollbar-thumb:hover{background:var(--gold-dim)}
+
+/* ============================================================
+   01 · LAYOUT
+   ============================================================ */
+.wrap{width:min(1480px,92vw);margin-inline:auto}
+.wrap--narrow{width:min(960px,90vw);margin-inline:auto}
+
+.section{padding:var(--sec-pad) 0;position:relative;overflow:hidden}
+.section--dark{background:var(--black);color:var(--ivory)}
+.section--black{background:var(--black-2);color:var(--ivory)}
+.section--ivory{background:var(--ivory);color:var(--espresso)}
+.section--espresso{background:var(--espresso);color:var(--ivory)}
+
+.eyebrow{
+  font-size:.65rem;letter-spacing:.4em;text-transform:uppercase;
+  font-weight:400;color:var(--gold);
+  display:inline-flex;align-items:center;gap:.85em;
+}
+.eyebrow::before{
+  content:'';width:clamp(22px,3.5vw,54px);height:1px;background:var(--gold);
+  display:inline-block;transform-origin:left;
+  animation:lineGrow 1.2s var(--ease) both;
+}
+@keyframes lineGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+.section--ivory .eyebrow{color:var(--gold-dim)}
+.section--ivory .eyebrow::before{background:var(--gold-dim)}
+
+.display{
+  font-family:var(--serif);font-weight:300;
+  line-height:1;letter-spacing:-.015em;
+  font-size:clamp(2.2rem,5.6vw,5rem);
+}
+.display em{font-style:italic;color:var(--gold)}
+.section--ivory .display em{color:var(--gold-dim)}
+
+.lede{font-size:clamp(.95rem,1.2vw,1.1rem);color:var(--taupe);max-width:56ch;font-weight:300}
+.section--ivory .lede{color:#6d5c4e}
+
+.sec-head{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;
+  gap:20px 40px;margin-bottom:clamp(28px,4.5vw,60px);
+}
+.sec-head .eyebrow{margin-bottom:14px}
+
+/* ============================================================
+   02 · BUTTONS & LINKS
+   ============================================================ */
+.btn{
+  --fill:var(--gold);
+  position:relative;display:inline-flex;align-items:center;justify-content:center;
+  gap:.7em;padding:1.05em 2.1em;
+  font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;font-weight:400;
+  border:1px solid var(--gold);color:var(--gold);
+  overflow:hidden;isolation:isolate;
+  transition:color .5s var(--ease),border-color .5s var(--ease);
+  white-space:nowrap;min-height:46px;text-align:center;
+}
+.btn::before{
+  content:'';position:absolute;inset:0;z-index:-1;
+  background:var(--fill);transform:translateY(101%);
+  transition:transform .6s var(--ease);
+}
+.btn:hover::before,.btn:focus-visible::before{transform:translateY(0)}
+.btn:hover,.btn:focus-visible{color:#111}
+.btn:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+
+.btn--solid{background:var(--gold);color:#111;border-color:var(--gold);--fill:var(--ivory)}
+.btn--solid:hover{color:#111;--fill:var(--gold-light)}
+
+.btn--ghost-dark{color:var(--ivory);border-color:rgba(247,243,235,.4);--fill:var(--ivory)}
+.btn--ghost-dark:hover{color:#111}
+
+.btn--ivory{color:var(--espresso);border-color:var(--espresso);--fill:var(--espresso)}
+.btn--ivory:hover{color:var(--ivory)}
+
+.btn--sm{padding:.82em 1.5em;font-size:.58rem;letter-spacing:.2em;min-height:40px}
+.btn--full{width:100%}
+
+.link-arrow{
+  display:inline-flex;align-items:center;gap:.7em;
+  font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);
+  position:relative;padding-bottom:.3em;
+}
+.link-arrow::after{
+  content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;
+  background:currentColor;transform:scaleX(0);transform-origin:right;
+  transition:transform .55s var(--ease);
+}
+.link-arrow:hover::after{transform:scaleX(1);transform-origin:left}
+.link-arrow svg{transition:transform .45s var(--ease)}
+.link-arrow:hover svg{transform:translateX(5px)}
+
+/* ============================================================
+   03 · IMAGE SYSTEM
+   ============================================================ */
+.img{position:relative;overflow:hidden;background:#141210;isolation:isolate}
+.img img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  transition:transform 1.2s var(--ease),opacity .8s var(--ease);
+  will-change:transform;
+}
+.img--kenburns img{animation:kenBurns 22s ease-in-out infinite alternate}
+@keyframes kenBurns{
+  0%{transform:scale(1) translate(0,0)}
+  100%{transform:scale(1.14) translate(-2%,-1.5%)}
+}
+.img--kenburns-rev img{animation:kenBurnsRev 26s ease-in-out infinite alternate}
+@keyframes kenBurnsRev{
+  0%{transform:scale(1.12) translate(1.5%,1%)}
+  100%{transform:scale(1) translate(0,0)}
+}
+.img--pan img{animation:panImg 28s ease-in-out infinite alternate}
+@keyframes panImg{
+  0%{transform:scale(1.1) translate(-1.5%,0)}
+  100%{transform:scale(1.1) translate(1.5%,0)}
+}
+.img__shade{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(10,10,10,.86),rgba(10,10,10,.15) 55%,rgba(10,10,10,.3));}
+.img__shade--soft{background:linear-gradient(to top,rgba(10,10,10,.7),transparent 60%)}
+
+/* ============================================================
+   04 · PRELOADER
+   ============================================================ */
+.preloader{
+  position:fixed;inset:0;z-index:9999;background:var(--black);
+  display:grid;place-items:center;
+  transition:opacity .65s var(--ease),visibility .65s;
+}
+.preloader.is-done{opacity:0;visibility:hidden;pointer-events:none}
+.preloader__inner{text-align:center;display:grid;place-items:center;gap:22px}
+.preloader__svg{width:clamp(90px,16vw,140px);height:auto;overflow:visible}
+.preloader__svg circle{
+  fill:none;stroke:var(--gold);stroke-width:2.4;stroke-linecap:round;
+  stroke-dasharray:90;stroke-dashoffset:90;animation:draw 1s var(--ease) .1s forwards;
+}
+.preloader__svg path{
+  fill:none;stroke:var(--gold);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:200;stroke-dashoffset:200;animation:draw 1.4s var(--ease) forwards;
+}
+.preloader__svg path:nth-of-type(1){animation-delay:.35s}
+.preloader__svg path:nth-of-type(2){animation-delay:.6s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.preloader__bar{width:130px;height:1px;background:rgba(198,166,107,.18);overflow:hidden}
+.preloader__bar i{display:block;height:100%;width:0;background:var(--gold);animation:loadBar 1.8s var(--ease) forwards}
+@keyframes loadBar{to{width:100%}}
+.preloader__tag{
+  font-size:.55rem;letter-spacing:.6em;text-transform:uppercase;color:var(--gold);
+  opacity:0;animation:fadeUp .9s var(--ease) 1.1s forwards;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ============================================================
+   05 · GRAIN & PROGRESS
+   ============================================================ */
+.grain{
+  position:fixed;inset:0;z-index:9994;pointer-events:none;
+  opacity:.045;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.scroll-progress{position:fixed;top:0;left:0;height:2px;width:100%;z-index:9993;background:transparent;pointer-events:none}
+.scroll-progress i{
+  display:block;height:100%;width:0%;
+  background:linear-gradient(90deg,var(--gold-dim),var(--gold),var(--ivory));
+  transition:width .1s linear;
+}
+
+/* ============================================================
+   06 · HEADER
+   ============================================================ */
+.hdr{
+  position:fixed;top:0;left:0;right:0;z-index:9000;
+  height:var(--hdr-h);display:flex;align-items:center;
+  padding:0 var(--gut);padding-top:env(safe-area-inset-top);
+  transition:background .45s var(--ease),height .45s var(--ease),transform .5s var(--ease),border-color .45s;
+  border-bottom:1px solid transparent;
+}
+.hdr.is-solid{
+  background:rgba(17,17,17,.94);
+  backdrop-filter:blur(16px) saturate(1.2);
+  -webkit-backdrop-filter:blur(16px) saturate(1.2);
+  border-bottom-color:rgba(198,166,107,.22);
+  height:68px;
+}
+.hdr.is-hidden{transform:translateY(-100%)}
+
+.hdr__logo{
+  display:flex;align-items:center;gap:11px;
+  font-family:var(--serif);letter-spacing:.22em;font-size:.92rem;
+  color:var(--gold);flex-shrink:0;
+}
+.hdr__mono{width:32px;height:32px;transition:transform .55s var(--ease)}
+.hdr__logo:hover .hdr__mono{transform:rotate(-8deg) scale(1.08)}
+.hdr__name{white-space:nowrap}
+
+.hdr__nav{display:none;margin-left:auto;margin-right:auto;gap:clamp(14px,2vw,36px)}
+@media(min-width:960px){.hdr__nav{display:flex}}
+.hdr__nav a{
+  font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;
+  color:rgba(247,243,235,.76);position:relative;padding:.5em 0;
+  transition:color .35s;
+}
+.hdr__nav a::after{
+  content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;
+  background:var(--gold);transform:scaleX(0);transform-origin:right;
+  transition:transform .5s var(--ease);
+}
+.hdr__nav a:hover,.hdr__nav a.is-active{color:var(--gold)}
+.hdr__nav a:hover::after,.hdr__nav a.is-active::after{transform:scaleX(1);transform-origin:left}
+
+.hdr__actions{display:flex;align-items:center;gap:clamp(4px,1vw,14px);margin-left:auto}
+@media(min-width:960px){.hdr__actions{margin-left:0}}
+
+.icon-btn{
+  position:relative;width:42px;height:42px;display:grid;place-items:center;
+  color:var(--ivory);transition:color .3s;border-radius:50%;
+}
+.icon-btn:hover{color:var(--gold)}
+.icon-btn svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.4}
+.badge{
+  position:absolute;top:5px;right:3px;min-width:15px;height:15px;padding:0 4px;border-radius:99px;
+  background:var(--gold);color:#111;font-size:.52rem;font-weight:500;letter-spacing:0;
+  display:grid;place-items:center;transform:scale(0);transition:transform .35s var(--ease);
+}
+.badge.is-on{transform:scale(1)}
+.badge.pop{animation:badgePop .5s var(--ease)}
+@keyframes badgePop{0%{transform:scale(1)}45%{transform:scale(1.5)}100%{transform:scale(1)}}
+
+.hdr .btn{display:none}
+@media(min-width:960px){.hdr .btn{display:inline-flex}}
+
+.burger{display:flex;width:42px;height:42px;flex-direction:column;justify-content:center;align-items:center;gap:6px}
+@media(min-width:960px){.burger{display:none}}
+.burger span{display:block;width:22px;height:1px;background:var(--ivory);transition:transform .45s var(--ease)}
+.burger.is-open span:nth-child(1){transform:translateY(3.5px) rotate(45deg)}
+.burger.is-open span:nth-child(2){transform:translateY(-3.5px) rotate(-45deg)}
+
+/* Mobile menu */
+.mmenu{
+  position:fixed;inset:0;z-index:8999;background:var(--black);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:calc(var(--hdr-h) + env(safe-area-inset-top)) var(--gut) calc(40px + env(safe-area-inset-bottom));
+  clip-path:inset(0 0 100% 0);
+  transition:clip-path .75s var(--ease);overflow-y:auto;
+}
+.mmenu.is-open{clip-path:inset(0 0 0 0)}
+.mmenu__list{display:grid;gap:clamp(4px,1.4vh,12px);margin-top:20px}
+.mmenu__list a{
+  font-family:var(--serif);font-size:clamp(1.8rem,8vw,3rem);
+  line-height:1.15;color:var(--ivory);font-weight:300;
+  display:flex;align-items:baseline;gap:.5em;
+  opacity:0;transform:translateY(30px);
+  transition:opacity .55s var(--ease),transform .55s var(--ease),color .3s;
+}
+.mmenu__list a span{font-family:var(--sans);font-size:.55rem;letter-spacing:.3em;color:var(--gold);opacity:.6}
+.mmenu.is-open .mmenu__list a{opacity:1;transform:none;transition-delay:calc(var(--i)*.06s + .15s)}
+.mmenu__list a:hover{color:var(--gold)}
+.mmenu__foot{margin-top:clamp(28px,5vh,52px);display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+
+/* ============================================================
+   07 · LOOKBOOK HERO SLIDESHOW
+   ============================================================ */
+.lb-hero{
+  position:relative;height:100svh;height:100vh;min-height:640px;
+  overflow:hidden;isolation:isolate;
+}
+@supports (height:100svh){.lb-hero{height:100svh;min-height:640px}}
+
+.lb-hero__slides{position:absolute;inset:0}
+.lb-hero__slide{
+  position:absolute;inset:0;opacity:0;visibility:hidden;
+  transition:opacity 1.4s var(--ease),visibility 1.4s;
+}
+.lb-hero__slide.is-active{opacity:1;visibility:visible}
+.lb-hero__slide .img{position:absolute;inset:0;transform:scale(1.06);transition:transform 9s linear}
+.lb-hero__slide.is-active .img{transform:scale(1.15)}
+.lb-hero__veil{
+  position:absolute;inset:0;z-index:1;
+  background:
+    linear-gradient(to top,rgba(10,10,10,.94) 0%,rgba(10,10,10,.42) 46%,rgba(10,10,10,.32) 100%),
+    linear-gradient(to right,rgba(10,10,10,.6) 0%,transparent 58%);
+}
+.lb-hero__body{
+  position:absolute;left:var(--gut);right:var(--gut);bottom:clamp(80px,12vh,150px);
+  z-index:2;max-width:min(980px,92vw);
+}
+.lb-hero__chapter{
+  font-size:.6rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);
+  display:inline-flex;align-items:center;gap:.9em;margin-bottom:clamp(18px,2.6vh,28px);
+  opacity:0;transform:translateY(12px);
+  transition:opacity .8s var(--ease) .2s,transform .8s var(--ease) .2s;
+}
+.lb-hero__slide.is-active .lb-hero__chapter{opacity:1;transform:none}
+.lb-hero__chapter::before{content:'';width:44px;height:1px;background:var(--gold)}
+.lb-hero__title{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(2.6rem,8vw,7.6rem);line-height:.94;letter-spacing:-.02em;
+  margin-bottom:.28em;
+}
+.lb-hero__title .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em}
+.lb-hero__title .w i{
+  display:inline-block;font-style:normal;
+  transform:translateY(112%);
+  transition:transform 1.05s var(--ease);
+  transition-delay:calc(var(--i)*.05s + .3s);
+}
+.lb-hero__slide.is-active .lb-hero__title .w i{transform:translateY(0)}
+.lb-hero__title em{font-style:italic;color:var(--gold)}
+.lb-hero__sub{
+  color:rgba(247,243,235,.76);max-width:48ch;
+  font-size:clamp(.88rem,1.15vw,1.05rem);
+  opacity:0;transform:translateY(16px);
+  transition:opacity .85s var(--ease) .8s,transform .85s var(--ease) .8s;
+}
+.lb-hero__slide.is-active .lb-hero__sub{opacity:1;transform:none}
+.lb-hero__ctas{
+  display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(20px,3vh,34px);
+  opacity:0;transform:translateY(16px);
+  transition:opacity .85s var(--ease) .95s,transform .85s var(--ease) .95s;
+}
+.lb-hero__slide.is-active .lb-hero__ctas{opacity:1;transform:none}
+
+.lb-hero__ui{
+  position:absolute;right:var(--gut);bottom:clamp(80px,12vh,150px);
+  display:flex;flex-direction:column;align-items:flex-end;gap:14px;z-index:3;
+}
+.lb-hero__counter{
+  font-family:var(--serif);font-size:1rem;letter-spacing:.16em;color:var(--gold);
+  display:flex;align-items:baseline;gap:5px;
+}
+.lb-hero__counter i{opacity:.4;font-style:normal;font-size:.66rem}
+.lb-hero__counter small{font-family:var(--sans);font-size:.58rem;letter-spacing:.2em;color:rgba(247,243,235,.5)}
+.lb-hero__bar{width:clamp(80px,11vw,160px);height:1px;background:rgba(247,243,235,.22);overflow:hidden}
+.lb-hero__bar i{display:block;height:100%;width:0;background:var(--gold)}
+.lb-hero__dots{display:flex;gap:9px}
+.lb-hero__dots button{
+  width:7px;height:7px;border-radius:50%;
+  border:1px solid rgba(198,166,107,.55);
+  transition:background .4s,transform .4s var(--ease);
+}
+.lb-hero__dots button.is-on{background:var(--gold);transform:scale(1.35)}
+
+.lb-hero__scroll{
+  position:absolute;left:50%;bottom:22px;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:9px;
+  font-size:.48rem;letter-spacing:.32em;text-transform:uppercase;
+  color:rgba(247,243,235,.42);z-index:3;
+}
+.lb-hero__scroll span{
+  width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);
+  position:relative;overflow:hidden;
+}
+.lb-hero__scroll span::after{
+  content:'';position:absolute;top:-100%;left:0;width:100%;height:100%;
+  background:var(--ivory);animation:scrollCue 2.4s var(--ease-io) infinite;
+}
+@keyframes scrollCue{0%{top:-100%}60%,100%{top:100%}}
+
+/* ============================================================
+   08 · CHAPTER FILTER BAR
+   ============================================================ */
+.chapter-bar{
+  position:sticky;top:0;z-index:800;
+  background:rgba(17,17,17,.96);
+  backdrop-filter:blur(16px) saturate(1.2);
+  -webkit-backdrop-filter:blur(16px) saturate(1.2);
+  border-bottom:1px solid rgba(198,166,107,.14);
+  transition:box-shadow .4s;
+}
+.chapter-bar.is-stuck{box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.chapter-bar__inner{
+  display:flex;align-items:center;gap:clamp(8px,1.6vw,22px);
+  padding:13px 0;overflow-x:auto;
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.chapter-bar__inner::-webkit-scrollbar{display:none}
+.chapter-bar__pills{display:flex;align-items:center;gap:clamp(8px,1.4vw,20px);flex:1;min-width:0}
+.chapter-pill{
+  position:relative;white-space:nowrap;
+  font-size:.55rem;letter-spacing:.24em;text-transform:uppercase;
+  color:rgba(247,243,235,.6);padding:.7em .1em;
+  transition:color .35s;flex-shrink:0;
+}
+.chapter-pill::after{
+  content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;
+  background:var(--gold);transform:scaleX(0);transform-origin:right;
+  transition:transform .45s var(--ease);
+}
+.chapter-pill:hover{color:var(--ivory)}
+.chapter-pill.is-on{color:var(--gold)}
+.chapter-pill.is-on::after{transform:scaleX(1);transform-origin:left}
+.chapter-pill__count{font-size:.48rem;opacity:.55;margin-left:.4em}
+
+.chapter-bar__right{display:flex;align-items:center;gap:clamp(8px,1.4vw,16px);flex-shrink:0}
+.result-count{
+  font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(247,243,235,.42);white-space:nowrap;
+}
+.result-count b{color:var(--gold);font-weight:400}
+
+/* ============================================================
+   09 · EDITORIAL GRID
+   ============================================================ */
+.editorial{padding:clamp(34px,5vw,72px) 0 clamp(60px,8vw,110px);background:var(--ivory)}
+
+.lb-grid{
+  display:grid;grid-template-columns:repeat(12,1fr);
+  gap:clamp(6px,1.2vw,14px);
+}
+.lb-item{
+  position:relative;overflow:hidden;cursor:pointer;
+  aspect-ratio:3/4;
+  animation:lbIn .7s var(--ease) both;
+  animation-delay:calc(var(--i,0) * 40ms);
+}
+@keyframes lbIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.lb-item .img{position:absolute;inset:0;transition:transform 1.1s var(--ease)}
+.lb-item:hover .img{transform:scale(1.07)}
+
+.lb-item__chapter{
+  position:absolute;top:12px;left:12px;z-index:3;
+  font-size:.46rem;letter-spacing:.26em;text-transform:uppercase;
+  background:rgba(17,17,17,.72);backdrop-filter:blur(6px);
+  color:var(--gold);padding:.55em .85em;border:1px solid rgba(198,166,107,.4);
+}
+.lb-item__shop{
+  position:absolute;left:10px;bottom:10px;z-index:3;
+  font-size:.46rem;letter-spacing:.22em;text-transform:uppercase;
+  background:rgba(17,17,17,.78);backdrop-filter:blur(6px);
+  color:var(--gold);padding:.6em .9em;border:1px solid rgba(198,166,107,.4);
+  transition:background .3s,color .3s;
+}
+.lb-item__shop:hover{background:var(--gold);color:#111}
+.lb-item__hover{
+  position:absolute;inset:0;z-index:2;
+  background:rgba(10,10,10,.55);
+  display:grid;place-items:center;
+  opacity:0;transition:opacity .5s var(--ease);
+}
+.lb-item:hover .lb-item__hover{opacity:1}
+.lb-item__hover span{
+  font-size:.54rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ivory);
+  border:1px solid rgba(247,243,235,.55);padding:.9em 1.5em;
+  transform:translateY(12px);transition:transform .5s var(--ease);
+}
+.lb-item:hover .lb-item__hover span{transform:none}
+.lb-item__cap{
+  position:absolute;right:12px;bottom:12px;z-index:3;
+  font-size:.46rem;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(247,243,235,.7);text-align:right;max-width:55%;
+  opacity:0;transition:opacity .4s;
+}
+.lb-item:hover .lb-item__cap{opacity:1}
+
+.sp-4{grid-column:span 4}
+.sp-5{grid-column:span 5}
+.sp-6{grid-column:span 6}
+.sp-7{grid-column:span 7}
+.sp-8{grid-column:span 8}
+.sp-12{grid-column:span 12;aspect-ratio:16/8}
+@media(max-width:768px){
+  .sp-4,.sp-5,.sp-6,.sp-7,.sp-8{grid-column:span 6}
+  .sp-12{grid-column:span 12;aspect-ratio:4/3}
+}
+
+/* Empty state */
+.lb-empty{
+  display:none;text-align:center;padding:clamp(50px,8vw,90px) 20px;
+  color:#8a7768;
+}
+.lb-empty h3{
+  font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,2rem);
+  font-weight:300;color:var(--espresso);margin-bottom:.4em;
+}
+.lb-empty p{font-size:.86rem;margin-bottom:1.6em}
+
+/* ============================================================
+   10 · FABRIC IN MOTION CAROUSEL
+   ============================================================ */
+.fabric-carousel{padding:clamp(56px,8vw,110px) 0;background:var(--black);position:relative;overflow:hidden}
+.fabric-carousel::before{
+  content:'';position:absolute;right:-10%;top:-20%;
+  width:50vw;height:50vw;max-width:600px;max-height:600px;
+  background:radial-gradient(circle,rgba(198,166,107,.1),transparent 68%);
+  pointer-events:none;
+}
+.fabric-track{
+  display:flex;gap:clamp(10px,1.6vw,20px);
+  overflow-x:auto;scroll-snap-type:x mandatory;
+  padding-bottom:14px;
+  scrollbar-width:none;-ms-overflow-style:none;
+  -webkit-overflow-scrolling:touch;
+}
+.fabric-track::-webkit-scrollbar{display:none}
+.fabric-tile{
+  position:relative;flex:0 0 clamp(260px,44vw,440px);
+  aspect-ratio:3/4;overflow:hidden;scroll-snap-align:start;
+  cursor:pointer;
+}
+.fabric-tile .img{position:absolute;inset:0}
+.fabric-tile__shade{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,10,10,.85),transparent 55%)}
+.fabric-tile__body{position:absolute;left:16px;right:16px;bottom:16px;z-index:2;display:flex;flex-direction:column;gap:5px}
+.fabric-tile__chapter{font-size:.46rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.fabric-tile__name{font-family:var(--serif);font-size:clamp(1.1rem,1.9vw,1.5rem);color:var(--ivory);line-height:1.15}
+.fabric-tile__watch{
+  position:absolute;top:14px;right:14px;z-index:2;
+  display:flex;align-items:center;gap:6px;
+  background:rgba(17,17,17,.6);backdrop-filter:blur(8px);
+  border:1px solid rgba(198,166,107,.4);
+  padding:.5em .8em;font-size:.46rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+}
+.fabric-tile__watch i{
+  width:6px;height:6px;border-radius:50%;background:var(--gold);
+  animation:liveDot 1.6s var(--ease-io) infinite;
+}
+@keyframes liveDot{0%,100%{opacity:.4}50%{opacity:1}}
+.fabric-nav{display:flex;gap:9px;margin-top:clamp(20px,3vw,32px)}
+.fabric-nav button{
+  width:46px;height:46px;border-radius:50%;
+  border:1px solid rgba(198,166,107,.4);color:var(--gold);
+  display:grid;place-items:center;
+  transition:background .4s var(--ease),color .4s,border-color .4s;
+}
+.fabric-nav button:hover{background:var(--gold);color:#111;border-color:var(--gold)}
+.fabric-nav button svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5}
+
+/* ============================================================
+   11 · SHOP THE LOOK HOTSPOTS
+   ============================================================ */
+.look-full{
+  position:relative;height:clamp(480px,78vh,860px);
+  overflow:hidden;
+}
+.look-full .img{position:absolute;inset:0}
+.look-full__overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(10,10,10,.82),transparent 60%);
+}
+.look-full__head{
+  position:absolute;left:var(--gut);right:var(--gut);bottom:clamp(28px,6vh,70px);z-index:4;
+  max-width:580px;
+}
+.look-full__head h2{
+  font-family:var(--serif);font-weight:300;line-height:1.02;
+  font-size:clamp(1.8rem,4.4vw,3.4rem);margin:.3em 0 .4em;
+}
+.look-full__head p{color:rgba(247,243,235,.76);font-size:clamp(.85rem,1.1vw,1rem);max-width:42ch}
+
+.hotspot{
+  position:absolute;z-index:5;width:34px;height:34px;transform:translate(-50%,-50%);
+  display:grid;place-items:center;
+}
+.hotspot::before,.hotspot::after{
+  content:'';position:absolute;inset:0;border-radius:50%;
+  border:1px solid var(--gold);
+}
+.hotspot::before{animation:hotPulse 2.6s var(--ease-io) infinite}
+.hotspot::after{animation:hotPulse 2.6s var(--ease-io) .9s infinite}
+@keyframes hotPulse{
+  0%{transform:scale(.5);opacity:1}
+  100%{transform:scale(2.1);opacity:0}
+}
+.hotspot i{
+  width:10px;height:10px;border-radius:50%;background:var(--gold);
+  box-shadow:0 0 0 4px rgba(198,166,107,.22);
+  transition:transform .35s var(--ease);
+}
+.hotspot:hover i{transform:scale(1.5)}
+
+.hotcard{
+  position:absolute;z-index:6;width:min(240px,74vw);
+  background:rgba(17,17,17,.96);backdrop-filter:blur(16px);
+  border:1px solid rgba(198,166,107,.32);
+  padding:14px;display:flex;gap:12px;align-items:center;
+  opacity:0;transform:translateY(10px) scale(.96);
+  pointer-events:none;
+  transition:opacity .4s var(--ease),transform .4s var(--ease);
+}
+.hotcard.is-open{opacity:1;transform:none;pointer-events:auto}
+.hotcard__img{width:52px;height:70px;flex-shrink:0;overflow:hidden;position:relative}
+.hotcard__img .img{position:absolute;inset:0}
+.hotcard__name{font-family:var(--serif);font-size:.95rem;line-height:1.2}
+.hotcard__price{font-size:.76rem;color:var(--gold);margin:.25em 0 .5em;letter-spacing:.06em}
+.hotcard__btn{
+  font-size:.5rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:2px;
+}
+
+/* ============================================================
+   12 · INSTAGRAM STRIP
+   ============================================================ */
+.ig-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:clamp(6px,1vw,10px);
+}
+@media(min-width:640px){.ig-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:960px){.ig-grid{grid-template-columns:repeat(6,1fr)}}
+.ig-item{
+  position:relative;aspect-ratio:1/1;overflow:hidden;display:block;
+}
+.ig-item .img{position:absolute;inset:0;transition:transform .9s var(--ease)}
+.ig-item:hover .img{transform:scale(1.1)}
+.ig-item__icon{
+  position:absolute;inset:0;z-index:2;
+  display:grid;place-items:center;
+  background:rgba(10,10,10,.55);
+  opacity:0;transition:opacity .4s;color:var(--ivory);
+}
+.ig-item:hover .ig-item__icon{opacity:1}
+.ig-item__icon svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.4}
+
+/* ============================================================
+   13 · CTA
+   ============================================================ */
+.final{
+  position:relative;min-height:clamp(420px,64vh,680px);
+  display:grid;place-items:center;text-align:center;overflow:hidden;
+  padding:clamp(60px,8vw,110px) var(--gut);
+}
+.final .img{position:absolute;inset:0}
+.final__veil{position:absolute;inset:0;z-index:1;background:rgba(10,10,10,.7)}
+.final__body{
+  position:relative;z-index:2;
+  display:flex;flex-direction:column;align-items:center;
+  gap:clamp(16px,2.4vw,26px);max-width:740px;
+}
+.final__body h2{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(1.9rem,5vw,4rem);line-height:1.02;
+}
+.final__body h2 em{font-style:italic;color:var(--gold)}
+
+/* ============================================================
+   14 · FOOTER
+   ============================================================ */
+.footer{
+  background:var(--black);border-top:1px solid rgba(198,166,107,.16);
+  padding:clamp(44px,6vw,84px) 0 0;
+}
+.footer__top{
+  display:grid;gap:clamp(28px,4vw,48px);
+  grid-template-columns:1fr;
+  padding-bottom:clamp(36px,5vw,60px);
+}
+@media(min-width:640px){.footer__top{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.footer__top{grid-template-columns:1.5fr 1fr 1fr 1.2fr}}
+
+.footer__brand{display:flex;flex-direction:column;gap:12px}
+.footer__logo{font-family:var(--serif);font-size:1.4rem;letter-spacing:.22em;color:var(--gold)}
+.footer__tag{font-size:.54rem;letter-spacing:.4em;text-transform:uppercase;color:rgba(247,243,235,.4)}
+.footer__promise{font-size:.84rem;color:var(--taupe);max-width:34ch;line-height:1.7}
+.footer h5{font-size:.54rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:400}
+.footer__links{display:grid;gap:10px}
+.footer__links a{
+  font-size:.83rem;color:var(--taupe);
+  transition:color .3s,transform .4s var(--ease);
+  display:inline-block;width:fit-content;
+}
+.footer__links a:hover{color:var(--gold);transform:translateX(5px)}
+.footer__links a.is-active{color:var(--gold)}
+.socials{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.socials a{
+  width:38px;height:38px;border:1px solid rgba(198,166,107,.28);
+  display:grid;place-items:center;color:var(--taupe);border-radius:50%;
+  transition:color .35s,border-color .35s,background .35s,transform .45s var(--ease);
+}
+.socials a:hover{color:#111;background:var(--gold);border-color:var(--gold);transform:translateY(-4px)}
+.socials svg{width:16px;height:16px;fill:currentColor}
+.footer__bottom{
+  border-top:1px solid rgba(198,166,107,.14);
+  padding:20px 0 26px;
+  display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between;
+  font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(247,243,235,.34);
+  padding-bottom:calc(26px + env(safe-area-inset-bottom));
+}
+.footer__bottom a:hover{color:var(--gold)}
+
+/* ============================================================
+   15 · FLOATING WHATSAPP + TO TOP
+   ============================================================ */
+.wa-float{
+  position:fixed;right:clamp(12px,2.2vw,26px);bottom:clamp(12px,2.2vw,26px);
+  z-index:8500;width:56px;height:56px;border-radius:50%;
+  background:var(--gold);color:#111;display:grid;place-items:center;
+  box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 0 0 rgba(198,166,107,.5);
+  transition:transform .5s var(--ease);
+  animation:waPulse 3.4s var(--ease-io) infinite;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+@keyframes waPulse{
+  0%{box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 0 0 rgba(198,166,107,.45)}
+  70%{box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 0 18px rgba(198,166,107,0)}
+  100%{box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 0 0 rgba(198,166,107,0)}
+}
+.wa-float:hover{transform:scale(1.08) rotate(-6deg)}
+.wa-float svg{width:26px;height:26px;fill:currentColor}
+.wa-float__tip{
+  position:absolute;right:calc(100% + 12px);top:50%;transform:translateY(-50%) translateX(8px);
+  background:var(--ivory);color:var(--espresso);
+  font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;
+  padding:.8em 1.1em;white-space:nowrap;
+  opacity:0;pointer-events:none;transition:opacity .4s,transform .4s var(--ease);
+}
+.wa-float__tip::after{
+  content:'';position:absolute;left:100%;top:50%;transform:translateY(-50%);
+  border:5px solid transparent;border-left-color:var(--ivory);
+}
+.wa-float:hover .wa-float__tip{opacity:1;transform:translateY(-50%) translateX(0)}
+@media(max-width:640px){.wa-float__tip{display:none}}
+
+.to-top{
+  position:fixed;left:clamp(12px,2.2vw,26px);bottom:clamp(12px,2.2vw,26px);
+  z-index:8400;width:44px;height:44px;border-radius:50%;
+  background:rgba(17,17,17,.9);border:1px solid rgba(198,166,107,.4);
+  color:var(--gold);display:grid;place-items:center;
+  opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .4s,visibility .4s,transform .4s var(--ease),background .3s;
+}
+.to-top.is-on{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:var(--gold);color:#111}
+.to-top svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5}
+
+/* ============================================================
+   16 · OVERLAYS
+   ============================================================ */
+.scrim{
+  position:fixed;inset:0;background:rgba(6,6,6,.78);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  z-index:9100;opacity:0;visibility:hidden;
+  transition:opacity .45s var(--ease),visibility .45s;
+}
+.scrim.is-open{opacity:1;visibility:visible}
+
+.drawer{
+  position:fixed;top:0;right:0;bottom:0;z-index:9200;
+  width:min(440px,100%);background:var(--black);
+  border-left:1px solid rgba(198,166,107,.22);
+  transform:translateX(100%);
+  transition:transform .65s var(--ease);
+  display:flex;flex-direction:column;
+  padding-top:env(safe-area-inset-top);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.drawer.is-open{transform:none}
+.drawer--wide{width:min(540px,100%)}
+.drawer__head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px clamp(16px,3vw,28px);
+  border-bottom:1px solid rgba(198,166,107,.14);
+  flex-shrink:0;
+}
+.drawer__title{font-family:var(--serif);font-size:1.25rem;letter-spacing:.05em;color:var(--gold)}
+.close-btn{
+  width:38px;height:38px;display:grid;place-items:center;
+  color:var(--taupe);transition:color .3s,transform .45s var(--ease);
+}
+.close-btn:hover{color:var(--gold);transform:rotate(90deg)}
+.close-btn svg{width:18px;height:18px;stroke:currentColor;stroke-width:1.4;fill:none}
+.drawer__body{flex:1;overflow-y:auto;padding:clamp(16px,3vw,28px);scrollbar-width:thin}
+.drawer__foot{
+  padding:clamp(16px,3vw,24px);
+  border-top:1px solid rgba(198,166,107,.14);
+  display:grid;gap:10px;flex-shrink:0;
+}
+
+.basket-item{
+  display:grid;grid-template-columns:68px 1fr auto;gap:12px;
+  padding:14px 0;border-bottom:1px solid rgba(198,166,107,.12);
+  align-items:start;
+}
+.basket-item__img{position:relative;aspect-ratio:3/4;overflow:hidden}
+.basket-item__img .img{position:absolute;inset:0}
+.basket-item__name{font-family:var(--serif);font-size:.98rem;line-height:1.25}
+.basket-item__meta{font-size:.68rem;color:var(--taupe);margin-top:3px;letter-spacing:.06em}
+.basket-item__price{font-size:.8rem;color:var(--gold);margin-top:6px}
+.basket-item__rm{
+  font-size:.52rem;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(247,243,235,.4);transition:color .3s;align-self:start;padding:4px;
+}
+.basket-item__rm:hover{color:#e07b7b}
+.basket-empty{text-align:center;padding:50px 0;color:var(--taupe);font-size:.85rem;line-height:1.8}
+
+/* Quick view */
+.qv__gallery{position:relative;aspect-ratio:3/4;overflow:hidden;margin-bottom:20px}
+.qv__gallery .img{position:absolute;inset:0;transition:opacity .5s}
+.qv__thumbs{display:flex;gap:7px;margin-top:10px}
+.qv__thumb{
+  position:relative;width:54px;aspect-ratio:3/4;overflow:hidden;
+  border:1px solid transparent;transition:border-color .3s;cursor:pointer;
+}
+.qv__thumb.is-on{border-color:var(--gold)}
+.qv__thumb .img{position:absolute;inset:0}
+.qv__name{font-family:var(--serif);font-size:1.6rem;line-height:1.15;font-weight:300}
+.qv__price{font-family:var(--serif);font-size:1.25rem;color:var(--gold);margin:.3em 0 .9em}
+.qv__block{margin-bottom:18px}
+.qv__label{
+  font-size:.52rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:8px;display:block;
+}
+.qv__text{font-size:.84rem;color:var(--taupe);line-height:1.7}
+.sizes{display:flex;flex-wrap:wrap;gap:7px}
+.size-btn{
+  min-width:42px;padding:.7em .4em;
+  border:1px solid rgba(198,166,107,.3);
+  font-size:.66rem;letter-spacing:.08em;color:var(--taupe);
+  transition:background .3s,color .3s,border-color .3s;
+  min-height:40px;
+}
+.size-btn:hover{border-color:var(--gold);color:var(--gold)}
+.size-btn.is-on{background:var(--gold);color:#111;border-color:var(--gold)}
+.colors{display:flex;gap:8px;flex-wrap:wrap}
+.color-dot{
+  width:26px;height:26px;border-radius:50%;
+  border:1px solid rgba(247,243,235,.25);
+  position:relative;transition:transform .3s var(--ease);
+}
+.color-dot:hover{transform:scale(1.12)}
+.color-dot.is-on::after{
+  content:'';position:absolute;inset:-4px;border:1px solid var(--gold);border-radius:50%;
+}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;inset:0;z-index:9400;background:rgba(6,6,6,.98);
+  display:grid;place-items:center;padding:clamp(16px,4vw,60px);
+  opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility .45s;
+}
+.lightbox.is-open{opacity:1;visibility:visible}
+.lb-img{
+  position:relative;width:min(620px,90vw);aspect-ratio:3/4;overflow:hidden;
+  transform:scale(.94);transition:transform .55s var(--ease);
+}
+.lightbox.is-open .lb-img{transform:none}
+.lb-img .img{position:absolute;inset:0}
+.lb-cap{
+  position:absolute;left:0;right:0;bottom:calc(100% + 14px);text-align:center;
+  font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);
+}
+.lb-close{position:absolute;top:clamp(14px,3vw,28px);right:clamp(14px,3vw,28px);z-index:2;color:var(--ivory)}
+.lb-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:46px;height:46px;display:grid;place-items:center;
+  border:1px solid rgba(247,243,235,.24);color:var(--ivory);
+  transition:background .35s,color .35s,border-color .35s;border-radius:50%;
+  z-index:2;
+}
+.lb-nav:hover{background:var(--gold);color:#111;border-color:var(--gold)}
+.lb-prev{left:clamp(6px,2vw,26px)}
+.lb-next{right:clamp(6px,2vw,26px)}
+.lb-nav svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.4}
+.lb-foot{
+  position:absolute;bottom:clamp(18px,4vw,40px);left:50%;transform:translateX(-50%);
+  display:flex;gap:10px;flex-wrap:wrap;justify-content:center;z-index:2;
+}
+
+/* Size modal */
+.modal{
+  position:fixed;top:50%;left:50%;z-index:9300;
+  transform:translate(-50%,-46%) scale(.96);
+  width:min(640px,92vw);max-height:86vh;overflow-y:auto;
+  background:var(--black);border:1px solid rgba(198,166,107,.26);
+  padding:clamp(20px,4vw,40px);
+  opacity:0;visibility:hidden;
+  transition:opacity .4s var(--ease),transform .5s var(--ease),visibility .4s;
+}
+.modal.is-open{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+.modal h3{font-family:var(--serif);font-size:1.6rem;font-weight:300;color:var(--gold);margin-bottom:6px}
+.modal p{font-size:.8rem;color:var(--taupe);margin-bottom:18px}
+.size-table{width:100%;border-collapse:collapse;font-size:.78rem}
+.size-table th,.size-table td{padding:11px 9px;text-align:left;border-bottom:1px solid rgba(198,166,107,.14)}
+.size-table th{font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:400}
+.size-table td{color:var(--taupe)}
+.size-table tr:hover td{color:var(--ivory)}
+
+/* Toast */
+.toast{
+  position:fixed;left:50%;bottom:clamp(18px,4vw,36px);z-index:9600;
+  transform:translate(-50%,140%);
+  background:var(--ivory);color:var(--espresso);
+  padding:12px 22px;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  transition:transform .55s var(--ease);
+  display:flex;align-items:center;gap:10px;
+  box-shadow:0 18px 44px rgba(0,0,0,.5);
+  max-width:90vw;text-align:center;
+}
+.toast.is-on{transform:translate(-50%,0)}
+.toast::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* ============================================================
+   17 · REVEALS
+   ============================================================ */
+[data-reveal]{
+  opacity:0;transform:translateY(30px);
+  transition:opacity .9s var(--ease),transform .9s var(--ease);
+  transition-delay:var(--d,0s);
+}
+[data-reveal].is-in{opacity:1;transform:none}
+
+[data-reveal="mask"]{
+  opacity:1;transform:none;
+  clip-path:inset(0 0 100% 0);
+  transition:clip-path 1.15s var(--ease);
+  transition-delay:var(--d,0s);
+}
+[data-reveal="mask"].is-in{clip-path:inset(0 0 0 0)}
+
+/* ============================================================
+   18 · RESPONSIVE
+   ============================================================ */
+@media(max-width:960px){
+  :root{--hdr-h:70px}
+  .hdr__logo .hdr__name{display:none}
+  .lb-hero__ui{right:var(--gut);bottom:auto;top:calc(var(--hdr-h) + env(safe-area-inset-top) + 20px);align-items:flex-end}
+  .lb-hero__counter{font-size:.8rem}
+  .lb-hero__bar{width:76px}
+  .lb-hero__scroll{display:none}
+  .lb-hero__body{bottom:clamp(60px,9vh,110px)}
+}
+@media(max-width:600px){
+  .hdr__actions .icon-btn[aria-label="View wishlist"]{display:none}
+  .btn{padding:.95em 1.6em;font-size:.6rem}
+  .result-count{display:none}
+  .lb-hero__title{font-size:clamp(2rem,8vw,3.2rem)}
+  .fabric-nav{display:none}
+}
+@media(max-width:380px){
+  .hdr__logo .hdr__mono{width:28px;height:28px}
+}
+
+img,svg,video,canvas{max-width:100%}
+
+/* ============================================================
+   19 · REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
+  }
+  [data-reveal]{opacity:1 !important;transform:none !important;clip-path:none !important}
+  .lb-item{animation:none !important}
+  .lb-hero__title .w i{transform:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ═══════════════ PRELOADER ═══════════════ -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <svg class="preloader__svg" viewBox="0 0 200 200" aria-hidden="true">
+      <circle cx="100" cy="30" r="13"/>
+      <path d="M76 46 L76 148 Q76 174 54 174 Q34 174 30 152"/>
+      <path d="M112 46 L112 174 L134 174 Q174 174 174 110 Q174 46 134 46 Z"/>
+    </svg>
+    <div class="preloader__bar"><i></i></div>
+    <p class="preloader__tag">Wear Elegance</p>
+  </div>
+</div>
+
+<!-- ═══════════════ CHROME ═══════════════ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress"><i id="scrollBar"></i></div>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="hdr" id="hdr">
+  <a href="index.html" class="hdr__logo" aria-label="JD COUTURE — home">
+    <svg class="hdr__mono" viewBox="0 0 200 200" aria-hidden="true">
+      <circle cx="100" cy="30" r="13" fill="none" stroke="#C6A66B" stroke-width="7"/>
+      <path d="M76 46 L76 148 Q76 174 54 174 Q34 174 30 152" fill="none" stroke="#C6A66B" stroke-width="7" stroke-linecap="round"/>
+      <path d="M112 46 L112 174 L134 174 Q174 174 174 110 Q174 46 134 46 Z" fill="none" stroke="#C6A66B" stroke-width="7" stroke-linejoin="round"/>
+    </svg>
+    <span class="hdr__name">JD COUTURE</span>
+  </a>
+
+  <nav class="hdr__nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="#" class="is-active" aria-current="page">Lookbook</a>
+    <a href="index.html#story">Our Story</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <div class="hdr__actions">
+    <button class="icon-btn" id="wishBtn" aria-label="View wishlist">
+      <svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.7-7.5-10a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20.5 10c0 5.3-7.5 10-7.5 10z"/></svg>
+      <span class="badge" id="wishBadge">0</span>
+    </button>
+    <button class="icon-btn" id="basketBtn" aria-label="Open basket">
+      <svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a1.6 1.6 0 0 1-1.6 1.4H7.8a1.6 1.6 0 0 1-1.6-1.4L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="badge" id="basketBadge">0</span>
+    </button>
+    <a href="#" class="btn btn--sm btn--solid" data-wa="Hi JD COUTURE, I'd like to place an order.">Order on WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══════════════ MOBILE MENU ═══════════════ -->
+<div class="mmenu" id="mmenu">
+  <nav class="mmenu__list" aria-label="Mobile">
+    <a href="index.html" style="--i:0"><span>01</span>Home</a>
+    <a href="shop.html" style="--i:1"><span>02</span>Shop</a>
+    <a href="#" style="--i:2"><span>03</span>Lookbook</a>
+    <a href="index.html#story" style="--i:3"><span>04</span>Our Story</a>
+    <a href="index.html#contact" style="--i:4"><span>05</span>Contact</a>
+  </nav>
+  <div class="mmenu__foot">
+    <a href="#" class="btn btn--solid" data-wa="Hi JD COUTURE, I'd like to place an order.">Order on WhatsApp</a>
+    <a href="index.html#contact" class="link-arrow">Book a fitting
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════ MAIN ═══════════════ -->
+<main>
+
+  <!-- ============================================================
+       HERO SLIDESHOW
+       ============================================================ -->
+  <section class="lb-hero" id="lbHero">
+    <div class="lb-hero__slides" id="heroSlides"></div>
+    <div class="lb-hero__ui">
+      <div class="lb-hero__counter"><span id="hCur">01</span><i>/</i><small id="hTot">04</small></div>
+      <div class="lb-hero__bar"><i id="hBar"></i></div>
+      <div class="lb-hero__dots" id="hDots"></div>
+    </div>
+    <div class="lb-hero__scroll">Scroll<span></span></div>
+  </section>
+
+  <!-- ============================================================
+       CHAPTER FILTER BAR
+       ============================================================ -->
+  <div class="chapter-bar" id="chapterBar">
+    <div class="wrap">
+      <div class="chapter-bar__inner">
+        <div class="chapter-bar__pills" id="chapterPills"></div>
+        <div class="chapter-bar__right">
+          <span class="result-count">Showing <b id="resultCount">24</b> / <span id="resultTotal">24</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       EDITORIAL GRID
+       ============================================================ -->
+  <section class="editorial">
+    <div class="wrap">
+      <div class="lb-grid" id="lookbookGrid"></div>
+      <div class="lb-empty" id="lookbookEmpty">
+        <h3>No looks in this chapter yet.</h3>
+        <p>Try another chapter, or view the full editorial.</p>
+        <button class="btn btn--ivory" id="resetChapter">View All Chapters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FABRIC IN MOTION CAROUSEL
+       ============================================================ -->
+  <section class="fabric-carousel" id="fabric">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow" data-reveal>Fabric in Motion</p>
+          <h2 class="display" data-reveal style="--d:.08s">Weight. Drape. <em>Movement.</em></h2>
+        </div>
+        <p class="lede" data-reveal style="--d:.16s;max-width:36ch">Film does for fabric what a photograph cannot. Watch how the piece moves before you commit to the cut.</p>
+      </div>
+
+      <div class="fabric-track" id="fabricTrack"></div>
+      <div class="fabric-nav">
+        <button id="fabricPrev" aria-label="Previous">
+          <svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        </button>
+        <button id="fabricNext" aria-label="Next">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SHOP THE LOOK HOTSPOTS
+       ============================================================ -->
+  <section class="look-full" id="lookSection">
+    <div class="img img--kenburns">
+      <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=1920&q=85" alt="Editorial look featuring JD COUTURE" loading="lazy" decoding="async">
+    </div>
+    <div class="look-full__overlay"></div>
+    <div class="look-full__head">
+      <p class="eyebrow" data-reveal>Shop the Look</p>
+      <h2 data-reveal style="--d:.08s">Wear it like she does.</h2>
+      <p data-reveal style="--d:.16s">Tap the gold points. Make the look yours.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INSTAGRAM STRIP
+       ============================================================ -->
+  <section class="section section--black" id="instagram">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow" data-reveal>@jdcouture</p>
+          <h2 class="display" data-reveal style="--d:.08s">Worn in the wild.</h2>
+        </div>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="link-arrow" data-reveal style="--d:.16s">Follow along
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="ig-grid" id="igGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA
+       ============================================================ -->
+  <section class="final">
+    <div class="img img--kenburns">
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1920&q=85" alt="JD COUTURE — Wear Elegance" loading="lazy" decoding="async">
+    </div>
+    <div class="final__veil"></div>
+    <div class="final__body">
+      <p class="eyebrow" data-reveal>See something you love?</p>
+      <h2 data-reveal style="--d:.08s">Tap any look. <em>Make it yours.</em></h2>
+      <p class="lede" style="color:rgba(247,243,235,.74);text-align:center" data-reveal style="--d:.16s">
+        Every image links to the pieces worn. Or message us and we will style it for you.
+      </p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center" data-reveal style="--d:.24s">
+        <a href="#" class="btn btn--solid" data-wa="Hi JD COUTURE, I saw a look in your lookbook and I'd like help styling it.">Order on WhatsApp</a>
+        <a href="shop.html" class="btn btn--ghost-dark">Shop the Collection</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <span class="footer__logo">JD COUTURE</span>
+        <span class="footer__tag">Wear Elegance</span>
+        <p class="footer__promise">Couture tailoring from California, Ogbomoso. Made to be worn anywhere.</p>
+        <div class="socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 5.1a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z"/></svg>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M16.6 5.8a5 5 0 0 1-3-1V14a5.5 5.5 0 1 1-5.5-5.5c.3 0 .6 0 .9.1v2.7a2.8 2.8 0 1 0 2 2.7V2.2h2.6a5 5 0 0 0 3 3.6z"/></svg>
+          </a>
+          <a href="#" data-wa="Hi JD COUTURE!" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.1.1.3 0 .4-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.6-.1.3.1 1.6.8 1.9.9.3.2.5.2.5.4.1.1.1.6-.1 1.2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h5>Explore</h5>
+        <div class="footer__links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="#" class="is-active">Lookbook</a>
+          <a href="index.html#story">Our Story</a>
+          <a href="index.html#contact">Contact &amp; Order</a>
+        </div>
+      </div>
+
+      <div>
+        <h5>Help</h5>
+        <div class="footer__links">
+          <a href="#" id="footerSizeGuide">Size Guide</a>
+          <a href="#" data-wa="Hi JD COUTURE, what is your delivery and returns policy?">Delivery &amp; Returns</a>
+          <a href="#" data-wa="Hi JD COUTURE, I have a question before ordering.">FAQ</a>
+          <a href="#" data-wa="Hi JD COUTURE, I'd like to book a fitting.">Book a Fitting</a>
+          <a href="#" data-wa="Hi JD COUTURE, I'd like a custom piece.">Bespoke Enquiry</a>
+        </div>
+      </div>
+
+      <div>
+        <h5>Visit</h5>
+        <p style="font-size:.82rem;color:var(--taupe);line-height:1.7">
+          JD COUTURE Studio<br>California, Ogbomoso,<br>Oyo State, Nigeria
+        </p>
+        <p style="font-size:.82rem;color:var(--taupe);line-height:1.7;margin-top:8px">
+          Mon–Sat · 9am – 7pm<br>Sun · By appointment
+        </p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> JD COUTURE · Wear Elegance</span>
+      <span>Site by Kreation Digitals</span>
+      <span>California, Ogbomoso · Oyo State</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════ FLOATING WHATSAPP ═══════════════ -->
+<a href="#" class="wa-float" id="waFloat" aria-label="Chat on WhatsApp"
+   data-wa="Hi JD COUTURE, I'd like to place an order.">
+  <span class="wa-float__tip">Chat with JD COUTURE</span>
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.1.1.3 0 .4-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.6-.1.3.1 1.6.8 1.9.9.3.2.5.2.5.4.1.1.1.6-.1 1.2z"/></svg>
+</a>
+
+<!-- Back to top -->
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<!-- ═══════════════ OVERLAYS ═══════════════ -->
+<div class="scrim" id="scrim"></div>
+
+<!-- Basket drawer -->
+<aside class="drawer" id="basketDrawer" aria-hidden="true">
+  <div class="drawer__head">
+    <span class="drawer__title">Your Basket</span>
+    <button class="close-btn" data-close aria-label="Close basket">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body" id="basketBody"></div>
+  <div class="drawer__foot">
+    <a href="#" class="btn btn--solid btn--full" id="basketCheckout">Send Order on WhatsApp</a>
+    <button class="btn btn--sm btn--full" id="basketClear">Clear basket</button>
+  </div>
+</aside>
+
+<!-- Wishlist drawer -->
+<aside class="drawer" id="wishDrawer" aria-hidden="true">
+  <div class="drawer__head">
+    <span class="drawer__title">Wishlist</span>
+    <button class="close-btn" data-close aria-label="Close wishlist">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body" id="wishBody"></div>
+  <div class="drawer__foot">
+    <a href="#" class="btn btn--solid btn--full" id="wishShare">Send Wishlist on WhatsApp</a>
+  </div>
+</aside>
+
+<!-- Quick view -->
+<aside class="drawer drawer--wide" id="quickDrawer" aria-hidden="true">
+  <div class="drawer__head">
+    <span class="drawer__title">Quick View</span>
+    <button class="close-btn" data-close aria-label="Close quick view">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body" id="quickBody"></div>
+  <div class="drawer__foot">
+    <button class="btn btn--solid btn--full" id="quickAdd">Add to Basket</button>
+    <a href="#" class="btn btn--sm btn--full" id="quickWA">Order on WhatsApp</a>
+  </div>
+</aside>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="close-btn lb-close" id="lbClose" aria-label="Close">
+    <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">
+    <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>
+  </button>
+  <div class="lb-img" id="lbImg">
+    <span class="lb-cap" id="lbCap"></span>
+    <div class="img" id="lbPh"></div>
+  </div>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">
+    <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+  <div class="lb-foot">
+    <button class="btn btn--solid btn--sm" id="lbShop">Shop this piece</button>
+    <a href="#" class="btn btn--sm" id="lbWA" data-wa="Hi JD COUTURE, I saw a look in your lookbook and I'd like to order it.">Order on WhatsApp</a>
+  </div>
+</div>
+
+<!-- Size guide modal -->
+<div class="modal" id="sizeModal" role="dialog" aria-modal="true" aria-label="Size guide">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
+    <div>
+      <h3>Size Guide</h3>
+      <p>Measurements in inches. If you sit between two sizes, take the larger — or send us your measurements and we will make it to you.</p>
+    </div>
+    <button class="close-btn" data-close aria-label="Close size guide">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <table class="size-table">
+    <thead>
+      <tr><th>Size</th><th>Bust</th><th>Waist</th><th>Hip</th><th>UK</th><th>US</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>XS</td><td>31–32</td><td>24–25</td><td>34–35</td><td>6</td><td>2</td></tr>
+      <tr><td>S</td><td>33–34</td><td>26–27</td><td>36–37</td><td>8</td><td>4</td></tr>
+      <tr><td>M</td><td>35–36</td><td>28–29</td><td>38–39</td><td>10</td><td>6</td></tr>
+      <tr><td>L</td><td>37–39</td><td>30–32</td><td>40–42</td><td>12</td><td>8</td></tr>
+      <tr><td>XL</td><td>40–42</td><td>33–35</td><td>43–45</td><td>14</td><td>10</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:20px;font-size:.78rem;color:var(--taupe)">
+    <b style="color:var(--gold);font-weight:400">How to measure:</b> Bust — around the fullest part. Waist — around the narrowest part. Hip — around the fullest part, feet together. Keep the tape level and snug, not tight.
+  </p>
+  <a href="#" class="btn btn--solid btn--sm" style="margin-top:22px" data-wa="Hi JD COUTURE, I need help with sizing. My measurements are:">Send My Measurements</a>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"><span id="toastText">Added to basket</span></div>
+
+<!-- ═══════════════ SCRIPT ═══════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ============================================================
+     CONFIG
+     ============================================================ */
+  const WA_NUMBER = '2348012345678';           // ← replace with the real WhatsApp business number
+  const CURRENCY  = '₦';
+  const REDUCE    = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const money  = n => CURRENCY + Number(n).toLocaleString('en-NG');
+  const waLink = msg => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+  const $  = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+
+  /* ============================================================
+     DATA · PRODUCTS
+     ============================================================ */
+  const PRODUCTS = [
+    {
+      id:'p01', name:'Adunni Sculpted Gown', price:185000, cat:'Gowns',
+      feel:'Sculpted satin. Floor-length.', fabric:'Duchess satin, fully lined',
+      fit:'True to size. Model is 5\'8", wearing M.', lead:'10–14 days',
+      colors:['#111111','#C6A66B','#49382E'], tag:'New',
+      img:'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p02', name:'Ile Ivory Two-Piece', price:142000, cat:'Two-Piece',
+      feel:'Soft structure. Quiet confidence.', fabric:'Crepe blend with silk trim',
+      fit:'Relaxed. Size down for a closer fit.', lead:'7–10 days',
+      colors:['#F7F3EB','#B8B0A4'], tag:'',
+      img:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p03', name:'Ogbomoso Native Set', price:168000, cat:'Native',
+      feel:'Aso-oke heritage, modern cut.', fabric:'Handwoven aso-oke, cotton lining',
+      fit:'Tailored. Made to measure available.', lead:'14–21 days',
+      colors:['#49382E','#C6A66B','#111111'], tag:'Few left',
+      img:'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1618375531912-867984bdfd87?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p04', name:'Boardroom Column Dress', price:155000, cat:'Corporate',
+      feel:'Sharp lines. Softer presence.', fabric:'Stretch wool blend',
+      fit:'True to size.', lead:'7–10 days',
+      colors:['#111111','#49382E'], tag:'',
+      img:'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p05', name:'Gold Hour Evening Gown', price:245000, cat:'Gowns',
+      feel:'Light catches. Room follows.', fabric:'Sequin mesh over satin',
+      fit:'Body-skimming. Model wears S.', lead:'14–18 days',
+      colors:['#C6A66B','#111111'], tag:'New',
+      img:'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p06', name:'Espresso Wrap Set', price:135000, cat:'Two-Piece',
+      feel:'Wrap it. Own the room.', fabric:'Linen-viscose blend',
+      fit:'Adjustable wrap. True to size.', lead:'7–10 days',
+      colors:['#49382E','#B8B0A4'], tag:'',
+      img:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p07', name:'Owambe Statement Kaftan', price:198000, cat:'Native',
+      feel:'Made for the entrance.', fabric:'Silk brocade, hand-finished',
+      fit:'Generous. Model wears M.', lead:'14–21 days',
+      colors:['#C6A66B','#49382E'], tag:'',
+      img:'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p08', name:'Ivory Precision Blazer', price:125000, cat:'Corporate',
+      feel:'The jacket that ends arguments.', fabric:'Structured crepe',
+      fit:'Tailored, true to size.', lead:'7–10 days',
+      colors:['#F7F3EB','#111111'], tag:'',
+      img:'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1531123414780-f74242c2b052?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p09', name:'Midnight Silk Slip', price:112000, cat:'Gowns',
+      feel:'Barely there. Never forgotten.', fabric:'100% mulberry silk',
+      fit:'Bias cut, true to size.', lead:'7–10 days',
+      colors:['#111111','#B8B0A4'], tag:'',
+      img:'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p10', name:'Champagne Occasion Set', price:176000, cat:'Two-Piece',
+      feel:'Toast-worthy, every time.', fabric:'Metallic jacquard',
+      fit:'True to size.', lead:'10–14 days',
+      colors:['#C6A66B','#F7F3EB'], tag:'New',
+      img:'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p11', name:'Signature Gold Belt', price:48000, cat:'Accessories',
+      feel:'One line. Whole look.', fabric:'Gold-plated hardware, leather',
+      fit:'Adjustable.', lead:'In stock',
+      colors:['#C6A66B','#111111'], tag:'',
+      img:'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p12', name:'Silk Head Wrap', price:35000, cat:'Accessories',
+      feel:'Finished from the top down.', fabric:'Mulberry silk twill',
+      fit:'One size.', lead:'In stock',
+      colors:['#49382E','#F7F3EB','#111111'], tag:'',
+      img:'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p13', name:'Lagos Nights Gown', price:215000, cat:'Gowns',
+      feel:'For the evening that matters.', fabric:'Velvet with satin trim',
+      fit:'True to size. Model wears M.', lead:'10–14 days',
+      colors:['#111111','#C6A66B'], tag:'',
+      img:'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p14', name:'Aso-Oke Heritage Set', price:188000, cat:'Native',
+      feel:'Handwoven. Hand-finished.', fabric:'Traditional aso-oke, cotton lining',
+      fit:'Tailored. Made to measure available.', lead:'14–21 days',
+      colors:['#49382E','#C6A66B'], tag:'',
+      img:'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p15', name:"Director's Suit", price:175000, cat:'Corporate',
+      feel:'Authority, tailored.', fabric:'Wool blend, silk lining',
+      fit:'Tailored. True to size.', lead:'10–14 days',
+      colors:['#111111','#49382E'], tag:'',
+      img:'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p16', name:'Satin Column Dress', price:145000, cat:'Gowns',
+      feel:'Clean line. Strong presence.', fabric:'Heavy satin, fully lined',
+      fit:'True to size.', lead:'7–10 days',
+      colors:['#111111','#F7F3EB'], tag:'',
+      img:'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p17', name:'The Heritage Kaftan', price:165000, cat:'Native',
+      feel:'An entrance in fabric form.', fabric:'Silk blend, hand-finished',
+      fit:'Generous. Model wears M.', lead:'14–21 days',
+      colors:['#C6A66B','#49382E'], tag:'',
+      img:'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p18', name:'Power Shoulder Blazer', price:138000, cat:'Corporate',
+      feel:'Shoulders first. Everything else follows.', fabric:'Structured crepe',
+      fit:'Tailored. True to size.', lead:'7–10 days',
+      colors:['#111111','#B8B0A4'], tag:'',
+      img:'https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1531123414780-f74242c2b052?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p19', name:'Gold Thread Boubou', price:192000, cat:'Native',
+      feel:'Tradition, re-cut.', fabric:'Silk boubou with gold thread',
+      fit:'Relaxed. Model wears M.', lead:'14–21 days',
+      colors:['#C6A66B','#111111'], tag:'',
+      img:'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p20', name:'Silk Cami Set', price:98000, cat:'Two-Piece',
+      feel:'Easy, polished, everyday.', fabric:'Sandwashed silk',
+      fit:'Relaxed. True to size.', lead:'7–10 days',
+      colors:['#F7F3EB','#B8B0A4','#111111'], tag:'',
+      img:'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p21', name:'Velvet Evening Dress', price:225000, cat:'Gowns',
+      feel:'Deep. Quiet. Unforgettable.', fabric:'Silk velvet, lined',
+      fit:'True to size. Model wears S.', lead:'10–14 days',
+      colors:['#111111','#49382E'], tag:'Few left',
+      img:'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p22', name:'Structured Crepe Suit', price:198000, cat:'Corporate',
+      feel:'Sharpness, softened.', fabric:'Structured crepe, silk lining',
+      fit:'Tailored. True to size.', lead:'10–14 days',
+      colors:['#111111','#F7F3EB'], tag:'',
+      img:'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p23', name:'Ankara Wrap Dress', price:128000, cat:'Native',
+      feel:'Print with presence.', fabric:'Ankara cotton, lined',
+      fit:'Adjustable wrap. True to size.', lead:'7–10 days',
+      colors:['#C6A66B','#49382E','#111111'], tag:'',
+      img:'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p24', name:'Champagne Silk Blouse', price:85000, cat:'Corporate',
+      feel:'Liquid. Light. Intentional.', fabric:'100% mulberry silk',
+      fit:'Relaxed. True to size.', lead:'7–10 days',
+      colors:['#F7F3EB','#C6A66B'], tag:'',
+      img:'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p25', name:'Ivory Lace Gown', price:265000, cat:'Gowns',
+      feel:'Made for the moment.', fabric:'French lace over satin',
+      fit:'True to size. Made to measure available.', lead:'14–21 days',
+      colors:['#F7F3EB','#C6A66B'], tag:'New',
+      img:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p26', name:'Tailored Jumpsuit', price:152000, cat:'Two-Piece',
+      feel:'One piece. Whole look.', fabric:'Stretch crepe, lined',
+      fit:'Tailored. True to size.', lead:'10–14 days',
+      colors:['#111111','#49382E'], tag:'',
+      img:'https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p27', name:'Embroidered Kaftan', price:158000, cat:'Native',
+      feel:'Detail that speaks quietly.', fabric:'Embroidered silk blend',
+      fit:'Relaxed. Model wears M.', lead:'14–21 days',
+      colors:['#C6A66B','#49382E'], tag:'',
+      img:'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p28', name:'Gold Statement Earrings', price:42000, cat:'Accessories',
+      feel:'One detail. Whole difference.', fabric:'Gold-plated brass, glass stone',
+      fit:'One size.', lead:'In stock',
+      colors:['#C6A66B','#111111'], tag:'',
+      img:'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p29', name:'Velvet Clutch', price:55000, cat:'Accessories',
+      feel:'Small piece. Big finish.', fabric:'Silk velvet, gold clasp',
+      fit:'One size.', lead:'In stock',
+      colors:['#111111','#49382E'], tag:'',
+      img:'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      id:'p30', name:'Silk Scarf', price:38000, cat:'Accessories',
+      feel:'The finishing note.', fabric:'Mulberry silk twill',
+      fit:'One size.', lead:'In stock',
+      colors:['#49382E','#F7F3EB','#C6A66B'], tag:'New',
+      img:'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80',
+      img2:'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80'
+    }
+  ];
+
+  /* ============================================================
+     DATA · HERO SLIDES
+     ============================================================ */
+  const HERO_SLIDES = [
+    {
+      chapter:'Chapter I · Midnight Gold',
+      title:'Midnight <em>Gold.</em>',
+      sub:'For entrances that do not need announcing. Deep blacks, liquid gold, and the kind of weight that moves when you do.',
+      img:'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=1920&q=85'
+    },
+    {
+      chapter:'Chapter II · Ivory Hours',
+      title:'Ivory <em>Hours.</em>',
+      sub:'For mornings that deserve an entrance. Soft structure, warm neutrals, quiet confidence.',
+      img:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1920&q=85'
+    },
+    {
+      chapter:'Chapter III · Owambe',
+      title:'Owambe <em>Héritage.</em>',
+      sub:'Aso-oke heritage, modern cut. Made for the aunties who will ask, and the cousins who will copy.',
+      img:'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=1920&q=85'
+    },
+    {
+      chapter:'Chapter IV · Studio',
+      title:'Behind the <em>Seams.</em>',
+      sub:'The sketch, the fabric, the cut, the finish. What happens between the idea and the box.',
+      img:'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=1920&q=85'
+    }
+  ];
+
+  /* ============================================================
+     DATA · LOOKBOOK (24 images across 4 chapters)
+     ============================================================ */
+  const CHAPTERS = {
+    midnight: { label:'Midnight Gold', short:'I · Midnight Gold' },
+    ivory:    { label:'Ivory Hours',  short:'II · Ivory Hours' },
+    owambe:   { label:'Owambe',       short:'III · Owambe' },
+    studio:   { label:'Studio',       short:'IV · Studio' }
+  };
+
+  const LOOKBOOK = [
+    /* Chapter I · Midnight Gold */
+    { id:'l01', chapter:'midnight', span:'sp-7', product:'p01',
+      cap:'Look 01 · The Adunni',
+      img:'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=1200&q=80' },
+    { id:'l02', chapter:'midnight', span:'sp-5', product:'p05',
+      cap:'Look 02 · Gold Hour',
+      img:'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1200&q=80' },
+    { id:'l03', chapter:'midnight', span:'sp-4', product:'p09',
+      cap:'Look 03 · Midnight Silk',
+      img:'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80' },
+    { id:'l04', chapter:'midnight', span:'sp-4', product:'p10',
+      cap:'Look 04 · Champagne',
+      img:'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80' },
+    { id:'l05', chapter:'midnight', span:'sp-4', product:'p16',
+      cap:'Look 05 · Satin Column',
+      img:'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80' },
+    { id:'l06', chapter:'midnight', span:'sp-12', product:'p06',
+      cap:'Look 06 · Espresso Wrap',
+      img:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80' },
+
+    /* Chapter II · Ivory Hours */
+    { id:'l07', chapter:'ivory', span:'sp-5', product:'p02',
+      cap:'Look 07 · Ile Ivory',
+      img:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1200&q=80' },
+    { id:'l08', chapter:'ivory', span:'sp-7', product:'p24',
+      cap:'Look 08 · Champagne Silk',
+      img:'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=80' },
+    { id:'l09', chapter:'ivory', span:'sp-4', product:'p04',
+      cap:'Look 09 · Boardroom',
+      img:'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80' },
+    { id:'l10', chapter:'ivory', span:'sp-8', product:'p08',
+      cap:'Look 10 · Ivory Precision',
+      img:'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=80' },
+    { id:'l11', chapter:'ivory', span:'sp-4', product:'p26',
+      cap:'Look 11 · Tailored Jumpsuit',
+      img:'https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=1000&q=80' },
+    { id:'l12', chapter:'ivory', span:'sp-4', product:'p20',
+      cap:'Look 12 · Silk Cami',
+      img:'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80' },
+
+    /* Chapter III · Owambe */
+    { id:'l13', chapter:'owambe', span:'sp-6', product:'p07',
+      cap:'Look 13 · Owambe Statement',
+      img:'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=1200&q=80' },
+    { id:'l14', chapter:'owambe', span:'sp-6', product:'p03',
+      cap:'Look 14 · Ogbomoso Native',
+      img:'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1200&q=80' },
+    { id:'l15', chapter:'owambe', span:'sp-4', product:'p17',
+      cap:'Look 15 · Heritage Kaftan',
+      img:'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=1000&q=80' },
+    { id:'l16', chapter:'owambe', span:'sp-4', product:'p14',
+      cap:'Look 16 · Aso-Oke Heritage',
+      img:'https://images.unsplash.com/photo-1618375531912-867984bdfd87?auto=format&fit=crop&w=1000&q=80' },
+    { id:'l17', chapter:'owambe', span:'sp-4', product:'p19',
+      cap:'Look 17 · Gold Thread',
+      img:'https://images.unsplash.com/photo-1531123414780-f74242c2b052?auto=format&fit=crop&w=1000&q=80' },
+    { id:'l18', chapter:'owambe', span:'sp-12', product:'p23',
+      cap:'Look 18 · Ankara Wrap',
+      img:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1600&q=80' },
+
+    /* Chapter IV · Studio */
+    { id:'l19', chapter:'studio', span:'sp-5', product:'p01',
+      cap:'Look 19 · In the Studio',
+      img:'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=1200&q=80' },
+    { id:'l20', chapter:'studio', span:'sp-7', product:'p11',
+      cap:'Look 20 · The Gold Belt',
+      img:'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80' },
+    { id:'l21', chapter:'studio', span:'sp-4', product:'p12',
+      cap:'Look 21 · Silk Head Wrap',
+      img:'https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=1000&q=80' },
+    { id:'l22', chapter:'studio', span:'sp-4', product:'p29',
+      cap:'Look 22 · Velvet Clutch',
+      img:'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1000&q=80' },
+    { id:'l23', chapter:'studio', span:'sp-4', product:'p22',
+      cap:'Look 23 · Structured Crepe',
+      img:'https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1000&q=80' },
+    { id:'l24', chapter:'studio', span:'sp-12', product:'p25',
+      cap:'Look 24 · Ivory Lace',
+      img:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80' }
+  ];
+
+  /* ============================================================
+     DATA · FABRIC IN MOTION
+     ============================================================ */
+  const FABRIC = [
+    { name:'Satin · Flow', chapter:'Fabric Study 01', product:'p05',
+      img:'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80' },
+    { name:'Stitch · Precision', chapter:'Fabric Study 02', product:'p22',
+      img:'https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=900&q=80' },
+    { name:'Aso-Oke · Weight', chapter:'Fabric Study 03', product:'p03',
+      img:'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=900&q=80' },
+    { name:'Silk · Movement', chapter:'Fabric Study 04', product:'p09',
+      img:'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=900&q=80' }
+  ];
+
+  /* ============================================================
+     DATA · INSTAGRAM
+     ============================================================ */
+  const INSTAGRAM = [
+    { img:'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=600&q=80', cap:'Adunni in the studio' },
+    { img:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80', cap:'Ile Ivory on location' },
+    { img:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80', cap:'Espresso Wrap, styled' },
+    { img:'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=600&q=80', cap:'Boardroom, after hours' },
+    { img:'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=600&q=80', cap:'Owambe, ready' },
+    { img:'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80', cap:'Gold Hour, preview' }
+  ];
+
+  /* ============================================================
+     STATE
+     ============================================================ */
+  let basket = [];
+  let wishlist = [];
+  try { basket = JSON.parse(localStorage.getItem('jd_basket') || '[]'); } catch (e) { basket = []; }
+  try { wishlist = JSON.parse(localStorage.getItem('jd_wish') || '[]'); } catch (e) { wishlist = []; }
+
+  const saveBasket = () => localStorage.setItem('jd_basket', JSON.stringify(basket));
+  const saveWish   = () => localStorage.setItem('jd_wish', JSON.stringify(wishlist));
+  const getProduct = id => PRODUCTS.find(p => p.id === id);
+
+  let activeChapter = 'all';
+  let filteredLookbook = [];
+
+  /* ============================================================
+     TOAST
+     ============================================================ */
+  let toastTimer;
+  function toast(msg) {
+    const el = $('#toast');
+    $('#toastText').textContent = msg;
+    el.classList.add('is-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove('is-on'), 2400);
+  }
+
+  /* ============================================================
+     WHATSAPP DELEGATION
+     ============================================================ */
+  document.addEventListener('click', e => {
+    const el = e.target.closest('[data-wa]');
+    if (!el) return;
+    e.preventDefault();
+    window.open(waLink(el.getAttribute('data-wa')), '_blank', 'noopener');
+  });
+
+  /* ============================================================
+     PRELOADER
+     ============================================================ */
+  function initPreloader() {
+    const pre = $('#preloader');
+    if (!pre) return;
+    document.body.classList.add('is-locked');
+    const done = () => {
+      pre.classList.add('is-done');
+      document.body.classList.remove('is-locked');
+      setTimeout(() => pre.remove(), 800);
+    };
+    if (REDUCE) setTimeout(done, 300);
+    else setTimeout(done, 2000);
+  }
+
+  /* ============================================================
+     HERO SLIDESHOW
+     ============================================================ */
+  function initHero() {
+    const wrap = $('#heroSlides');
+    if (!wrap) return;
+
+    wrap.innerHTML = HERO_SLIDES.map((s, i) => `
+      <div class="lb-hero__slide${i === 0 ? ' is-active' : ''}" data-slide="${i}">
+        <div class="img">
+          <img src="${s.img}" alt="${s.chapter}" loading="${i === 0 ? 'eager' : 'lazy'}" decoding="async" fetchpriority="${i === 0 ? 'high' : 'low'}">
+        </div>
+        <div class="lb-hero__veil"></div>
+        <div class="lb-hero__body">
+          <p class="lb-hero__chapter">${s.chapter}</p>
+          <h1 class="lb-hero__title">${s.title.split(' ').map((w, wi) => `<span class="w"><i style="--i:${wi}">${w}</i></span>`).join(' ')}</h1>
+          <p class="lb-hero__sub">${s.sub}</p>
+          <div class="lb-hero__ctas">
+            <a href="#editorial" class="btn btn--solid">Enter the Lookbook</a>
+            <a href="#" class="btn btn--ghost-dark" data-wa="Hi JD COUTURE, I saw the lookbook and I'd like to place an order.">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    $('#hTot').textContent = String(HERO_SLIDES.length).padStart(2, '0');
+    const dots = $('#hDots');
+    dots.innerHTML = HERO_SLIDES.map((_, i) => `<button data-dot="${i}" aria-label="Slide ${i + 1}" class="${i === 0 ? 'is-on' : ''}"></button>`).join('');
+
+    const slides = $$('.lb-hero__slide', wrap);
+    const cur = $('#hCur');
+    const bar = $('#hBar');
+    let idx = 0, timer = null, paused = false;
+    const DURATION = 6500;
+
+    function restartBar() {
+      bar.style.transition = 'none';
+      bar.style.width = '0%';
+      void bar.offsetWidth;
+      if (!paused && !REDUCE) {
+        bar.style.transition = `width ${DURATION}ms linear`;
+        bar.style.width = '100%';
+      }
+    }
+    function go(n) {
+      idx = (n + slides.length) % slides.length;
+      slides.forEach((s, i) => s.classList.toggle('is-active', i === idx));
+      $$('#hDots button').forEach((d, i) => d.classList.toggle('is-on', i === idx));
+      cur.textContent = String(idx + 1).padStart(2, '0');
+      restartBar();
+    }
+    function start() {
+      stop();
+      if (REDUCE) return;
+      timer = setInterval(() => { if (!paused) go(idx + 1); }, DURATION);
+    }
+    function stop() { if (timer) clearInterval(timer); timer = null; }
+
+    dots.addEventListener('click', e => {
+      const b = e.target.closest('button[data-dot]');
+      if (!b) return;
+      go(Number(b.dataset.dot));
+      start();
+    });
+
+    const hero = $('#lbHero');
+    hero.addEventListener('mouseenter', () => { paused = true; });
+    hero.addEventListener('mouseleave', () => { paused = false; restartBar(); });
+
+    let sx = 0, sy = 0;
+    hero.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+    hero.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - sx;
+      const dy = e.changedTouches[0].clientY - sy;
+      if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)) { go(idx + (dx < 0 ? 1 : -1)); start(); }
+    }, { passive: true });
+
+    restartBar();
+    start();
+  }
+
+  /* ============================================================
+     SCROLL CHROME
+     ============================================================ */
+  function initScrollChrome() {
+    const hdr = $('#hdr');
+    const bar = $('#scrollBar');
+    const toTop = $('#toTop');
+    const chapterBar = $('#chapterBar');
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    function onScroll() {
+      const y = window.scrollY;
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (bar) bar.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+
+      if (y > 60) hdr.classList.add('is-solid');
+      else hdr.classList.remove('is-solid');
+
+      if (y > 340 && y > lastY + 6) hdr.classList.add('is-hidden');
+      else if (y < lastY - 6 || y < 120) hdr.classList.remove('is-hidden');
+
+      if (toTop) toTop.classList.toggle('is-on', y > 600);
+
+      if (chapterBar) {
+        const rect = chapterBar.getBoundingClientRect();
+        chapterBar.classList.toggle('is-stuck', rect.top <= 1);
+      }
+
+      lastY = y;
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+    }, { passive: true });
+
+    onScroll();
+    if (toTop) toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+
+  /* ============================================================
+     REVEALS
+     ============================================================ */
+  let revealObserver;
+  function initReveals() {
+    revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.classList.add('is-in');
+          revealObserver.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    $$('[data-reveal]').forEach(el => revealObserver.observe(el));
+  }
+
+  /* ============================================================
+     CHAPTER FILTERS
+     ============================================================ */
+  function renderChapterPills() {
+    const wrap = $('#chapterPills');
+    if (!wrap) return;
+    const counts = { all: LOOKBOOK.length };
+    Object.keys(CHAPTERS).forEach(k => { counts[k] = LOOKBOOK.filter(l => l.chapter === k).length; });
+
+    const items = [
+      { key:'all', label:'All Chapters', count: counts.all },
+      ...Object.keys(CHAPTERS).map(k => ({ key:k, label: CHAPTERS[k].label, count: counts[k] }))
+    ];
+
+    wrap.innerHTML = items.map(it => `
+      <button class="chapter-pill ${it.key === activeChapter ? 'is-on' : ''}" data-chapter="${it.key}">
+        ${it.label}<span class="chapter-pill__count">${String(it.count).padStart(2,'0')}</span>
+      </button>
+    `).join('');
+
+    wrap.addEventListener('click', e => {
+      const b = e.target.closest('[data-chapter]');
+      if (!b) return;
+      activeChapter = b.dataset.chapter;
+      $$('#chapterPills .chapter-pill').forEach(p => p.classList.toggle('is-on', p.dataset.chapter === activeChapter));
+      renderLookbook();
+    });
+
+    const reset = $('#resetChapter');
+    if (reset) reset.addEventListener('click', () => {
+      activeChapter = 'all';
+      $$('#chapterPills .chapter-pill').forEach(p => p.classList.toggle('is-on', p.dataset.chapter === 'all'));
+      renderLookbook();
+    });
+  }
+
+  /* ============================================================
+     LOOKBOOK GRID
+     ============================================================ */
+  function renderLookbook() {
+    const grid = $('#lookbookGrid');
+    if (!grid) return;
+
+    let list = LOOKBOOK.slice();
+    if (activeChapter !== 'all') list = list.filter(l => l.chapter === activeChapter);
+    filteredLookbook = list;
+
+    const rc = $('#resultCount');
+    if (rc) rc.textContent = list.length;
+    const rt = $('#resultTotal');
+    if (rt) rt.textContent = LOOKBOOK.length;
+
+    const empty = $('#lookbookEmpty');
+    if (!list.length) {
+      grid.innerHTML = '';
+      if (empty) empty.style.display = 'block';
+      return;
+    }
+    if (empty) empty.style.display = 'none';
+
+    grid.innerHTML = list.map((it, i) => {
+      const chapter = CHAPTERS[it.chapter];
+      return `
+        <div class="lb-item ${it.span}" data-lb="${i}" style="--i:${i}">
+          <div class="img"><img src="${it.img}" alt="${it.cap}" loading="lazy" decoding="async"></div>
+          <span class="lb-item__chapter">${chapter.short}</span>
+          <span class="lb-item__shop" data-shop="${it.product}">Shop this look</span>
+          <span class="lb-item__cap">${it.cap}</span>
+          <div class="lb-item__hover"><span>View</span></div>
+        </div>
+      `;
+    }).join('');
+
+    bindLookbookEvents(grid);
+  }
+
+  function bindLookbookEvents(grid) {
+    grid.addEventListener('click', e => {
+      const shopBtn = e.target.closest('[data-shop]');
+      if (shopBtn) {
+        e.stopPropagation();
+        openQuick(shopBtn.dataset.shop);
+        return;
+      }
+      const item = e.target.closest('[data-lb]');
+      if (!item) return;
+      openLightbox(Number(item.dataset.lb));
+    }, { once: false });
+  }
+
+  /* ============================================================
+     LIGHTBOX
+     ============================================================ */
+  let lbIndex = 0;
+
+  function openLightbox(i) {
+    lbIndex = i;
+    paintLightbox();
+    scrim.classList.add('is-open');
+    const lb = $('#lightbox');
+    lb.classList.add('is-open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('is-locked');
+  }
+
+  function paintLightbox() {
+    const it = filteredLookbook[lbIndex];
+    if (!it) return;
+    const ph = $('#lbPh');
+    ph.innerHTML = `<img src="${it.img}" alt="${it.cap}" loading="eager">`;
+    $('#lbCap').textContent = it.cap;
+
+    const p = getProduct(it.product);
+    const shopBtn = $('#lbShop');
+    if (p) {
+      shopBtn.style.display = '';
+      shopBtn.textContent = `Shop · ${p.name}`;
+      shopBtn.onclick = () => {
+        closeAll();
+        setTimeout(() => openQuick(p.id), 200);
+      };
+      const wa = $('#lbWA');
+      wa.setAttribute('data-wa', `Hi JD COUTURE, I saw "${it.cap}" in your lookbook and I'd like to order the *${p.name}*.`);
+    } else {
+      shopBtn.style.display = 'none';
+    }
+  }
+
+  function initLightbox() {
+    const close = $('#lbClose');
+    const prev = $('#lbPrev');
+    const next = $('#lbNext');
+    const lb = $('#lightbox');
+    if (close) close.addEventListener('click', () => closeAll());
+    if (prev) prev.addEventListener('click', () => {
+      lbIndex = (lbIndex - 1 + filteredLookbook.length) % filteredLookbook.length;
+      paintLightbox();
+    });
+    if (next) next.addEventListener('click', () => {
+      lbIndex = (lbIndex + 1) % filteredLookbook.length;
+      paintLightbox();
+    });
+    if (lb) lb.addEventListener('click', e => { if (e.target.id === 'lightbox') closeAll(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('is-open')) return;
+      if (e.key === 'ArrowRight') { lbIndex = (lbIndex + 1) % filteredLookbook.length; paintLightbox(); }
+      if (e.key === 'ArrowLeft')  { lbIndex = (lbIndex - 1 + filteredLookbook.length) % filteredLookbook.length; paintLightbox(); }
+    });
+  }
+
+  /* ============================================================
+     FABRIC CAROUSEL
+     ============================================================ */
+  function initFabric() {
+    const track = $('#fabricTrack');
+    if (!track) return;
+    track.innerHTML = FABRIC.map(it => {
+      const p = getProduct(it.product);
+      return `
+        <div class="fabric-tile" data-product="${p ? p.id : ''}">
+          <div class="img ${Math.random() > 0.5 ? 'img--kenburns' : 'img--kenburns-rev'}">
+            <img src="${it.img}" alt="${it.name}" loading="lazy" decoding="async">
+          </div>
+          <div class="fabric-tile__shade"></div>
+          <span class="fabric-tile__watch"><i></i>Fabric in Motion</span>
+          <div class="fabric-tile__body">
+            <span class="fabric-tile__chapter">${it.chapter}</span>
+            <span class="fabric-tile__name">${it.name}</span>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    track.querySelectorAll('.fabric-tile').forEach(t => {
+      t.addEventListener('click', () => {
+        const pid = t.dataset.product;
+        if (pid) openQuick(pid);
+      });
+    });
+
+    const prev = $('#fabricPrev');
+    const next = $('#fabricNext');
+    const step = () => {
+      const tile = track.querySelector('.fabric-tile');
+      return tile ? tile.getBoundingClientRect().width + 20 : 300;
+    };
+    if (prev) prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    if (next) next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  }
+
+  /* ============================================================
+     SHOP THE LOOK HOTSPOTS
+     ============================================================ */
+  function initHotspots() {
+    const section = $('#lookSection');
+    if (!section) return;
+    const spots = [
+      { x: 30, y: 38, id: 'p01' },
+      { x: 62, y: 32, id: 'p05' },
+      { x: 46, y: 64, id: 'p09' },
+      { x: 78, y: 56, id: 'p11' }
+    ];
+    spots.forEach(sp => {
+      const p = getProduct(sp.id);
+      if (!p) return;
+      const btn = document.createElement('button');
+      btn.className = 'hotspot';
+      btn.style.left = sp.x + '%';
+      btn.style.top = sp.y + '%';
+      btn.setAttribute('aria-label', 'View ' + p.name);
+      btn.innerHTML = '<i></i>';
+      section.appendChild(btn);
+
+      const card = document.createElement('div');
+      card.className = 'hotcard';
+      card.style.left = clamp(sp.x, 10, 62) + '%';
+      card.style.top = (sp.y + 8) + '%';
+      card.innerHTML = `
+        <div class="hotcard__img"><div class="img"><img src="${p.img}" alt="" loading="lazy"></div></div>
+        <div>
+          <div class="hotcard__name">${p.name}</div>
+          <div class="hotcard__price">${money(p.price)}</div>
+          <button class="hotcard__btn" data-quick="${p.id}">Order</button>
+        </div>
+      `;
+      section.appendChild(card);
+
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const isOpen = card.classList.contains('is-open');
+        section.querySelectorAll('.hotcard').forEach(c => c.classList.remove('is-open'));
+        if (!isOpen) card.classList.add('is-open');
+      });
+      card.querySelector('[data-quick]').addEventListener('click', () => openQuick(p.id));
+    });
+    section.addEventListener('click', () => {
+      section.querySelectorAll('.hotcard').forEach(c => c.classList.remove('is-open'));
+    });
+  }
+
+  /* ============================================================
+     INSTAGRAM
+     ============================================================ */
+  function initInstagram() {
+    const wrap = $('#igGrid');
+    if (!wrap) return;
+    wrap.innerHTML = INSTAGRAM.map(it => `
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="ig-item" aria-label="${it.cap}">
+        <div class="img"><img src="${it.img}" alt="${it.cap}" loading="lazy" decoding="async"></div>
+        <div class="ig-item__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </div>
+      </a>
+    `).join('');
+  }
+
+  /* ============================================================
+     WISHLIST
+     ============================================================ */
+  function toggleWish(id, btn) {
+    const i = wishlist.indexOf(id);
+    if (i > -1) { wishlist.splice(i, 1); toast('Removed from wishlist'); }
+    else { wishlist.push(id); toast('Saved to wishlist'); }
+    saveWish();
+    updateBadges();
+    if (btn) {
+      btn.classList.toggle('is-on', wishlist.includes(id));
+      btn.classList.add('pop');
+      setTimeout(() => btn.classList.remove('pop'), 600);
+    }
+    $$(`[data-wish="${id}"]`).forEach(b => b.classList.toggle('is-on', wishlist.includes(id)));
+    renderWishlist();
+  }
+
+  function renderWishlist() {
+    const body = $('#wishBody');
+    if (!body) return;
+    if (!wishlist.length) {
+      body.innerHTML = `<p class="basket-empty">No pieces saved yet.<br>Tap the heart on any piece to keep it here.</p>`;
+      return;
+    }
+    body.innerHTML = wishlist.map(id => {
+      const p = getProduct(id);
+      if (!p) return '';
+      return `
+        <div class="basket-item">
+          <div class="basket-item__img"><div class="img"><img src="${p.img}" alt="${p.name}" loading="lazy"></div></div>
+          <div>
+            <div class="basket-item__name">${p.name}</div>
+            <div class="basket-item__meta">${p.cat}</div>
+            <div class="basket-item__price">${money(p.price)}</div>
+          </div>
+          <button class="basket-item__rm" data-unwish="${p.id}">Remove</button>
+        </div>
+      `;
+    }).join('');
+    body.querySelectorAll('[data-unwish]').forEach(b => {
+      b.addEventListener('click', () => toggleWish(b.dataset.unwish, null));
+    });
+  }
+
+  /* ============================================================
+     BASKET
+     ============================================================ */
+  function addToBasket(id, size, color) {
+    const p = getProduct(id);
+    if (!p) return;
+    size = size || 'M';
+    color = color || p.colors[0];
+    const existing = basket.find(b => b.id === id && b.size === size && b.color === color);
+    if (existing) existing.qty += 1;
+    else basket.push({ id, size, color, qty: 1 });
+    saveBasket();
+    updateBadges();
+    renderBasket();
+    toast(`${p.name} added to basket`);
+    const badge = $('#basketBadge');
+    if (badge) { badge.classList.add('pop'); setTimeout(() => badge.classList.remove('pop'), 600); }
+  }
+
+  function removeFromBasket(index) {
+    basket.splice(index, 1);
+    saveBasket();
+    updateBadges();
+    renderBasket();
+    toast('Removed from basket');
+  }
+
+  function basketTotal() {
+    return basket.reduce((sum, b) => {
+      const p = getProduct(b.id);
+      return sum + (p ? p.price * b.qty : 0);
+    }, 0);
+  }
+
+  function renderBasket() {
+    const body = $('#basketBody');
+    if (!body) return;
+    if (!basket.length) {
+      body.innerHTML = `<p class="basket-empty">Your basket is empty.<br><br>Add pieces from the collection and send the whole order in one WhatsApp message.</p>`;
+      return;
+    }
+    body.innerHTML = basket.map((b, i) => {
+      const p = getProduct(b.id);
+      if (!p) return '';
+      return `
+        <div class="basket-item">
+          <div class="basket-item__img"><div class="img"><img src="${p.img}" alt="${p.name}" loading="lazy"></div></div>
+          <div>
+            <div class="basket-item__name">${p.name}</div>
+            <div class="basket-item__meta">Size ${b.size} · Qty ${b.qty}</div>
+            <div class="basket-item__price">${money(p.price * b.qty)}</div>
+          </div>
+          <button class="basket-item__rm" data-rm="${i}">Remove</button>
+        </div>
+      `;
+    }).join('') + `
+      <div style="display:flex;justify-content:space-between;padding:20px 0 0;align-items:center">
+        <span style="font-size:.56rem;letter-spacing:.26em;text-transform:uppercase;color:var(--taupe)">Total</span>
+        <span style="color:var(--gold);font-family:var(--serif);font-size:1.1rem">${money(basketTotal())}</span>
+      </div>
+    `;
+    body.querySelectorAll('[data-rm]').forEach(b => {
+      b.addEventListener('click', () => removeFromBasket(Number(b.dataset.rm)));
+    });
+  }
+
+  function updateBadges() {
+    const bCount = basket.reduce((s, b) => s + b.qty, 0);
+    const bb = $('#basketBadge');
+    if (bb) { bb.textContent = bCount; bb.classList.toggle('is-on', bCount > 0); }
+    const wb = $('#wishBadge');
+    if (wb) { wb.textContent = wishlist.length; wb.classList.toggle('is-on', wishlist.length > 0); }
+  }
+
+  function basketMessage() {
+    const lines = ['*NEW ORDER — JD COUTURE*', ''];
+    basket.forEach(b => {
+      const p = getProduct(b.id);
+      if (!p) return;
+      lines.push(`• ${p.name} — Size ${b.size} × ${b.qty} — ${money(p.price * b.qty)}`);
+    });
+    lines.push('', `*Total: ${money(basketTotal())}*`, '', 'Name:', 'Delivery location:', 'Date needed:', '', 'Sent from the JD COUTURE lookbook.');
+    return lines.join('\n');
+  }
+
+  /* ============================================================
+     QUICK VIEW
+     ============================================================ */
+  let quickState = { id: null, size: 'M', color: null };
+
+  function openQuick(id) {
+    const p = getProduct(id);
+    if (!p) return;
+    quickState = { id, size: 'M', color: p.colors[0] };
+    const body = $('#quickBody');
+    body.innerHTML = `
+      <div class="qv__gallery" id="qvMain">
+        <div class="img"><img src="${p.img}" alt="${p.name}" loading="eager"></div>
+      </div>
+      <div class="qv__thumbs">
+        <div class="qv__thumb is-on" data-v="0"><div class="img"><img src="${p.img}" alt="" loading="lazy"></div></div>
+        <div class="qv__thumb" data-v="1"><div class="img"><img src="${p.img2}" alt="" loading="lazy"></div></div>
+      </div>
+
+      <div style="margin-top:22px">
+        ${p.tag ? `<span class="card__tag" style="position:static;display:inline-block;margin-bottom:10px">${p.tag}</span>` : ''}
+        <h2 class="qv__name">${p.name}</h2>
+        <div class="qv__price">${money(p.price)}</div>
+      </div>
+
+      <div class="qv__block">
+        <span class="qv__label">Why you will love it</span>
+        <p class="qv__text">${p.feel} ${p.fabric}.</p>
+      </div>
+
+      <div class="qv__block">
+        <span class="qv__label">Fit &amp; Fabric</span>
+        <p class="qv__text">${p.fit}<br>Fabric: ${p.fabric}<br>Made in: ${p.lead}</p>
+      </div>
+
+      <div class="qv__block">
+        <span class="qv__label">Size</span>
+        <div class="sizes" id="qvSizes">
+          ${['XS','S','M','L','XL'].map(s => `<button class="size-btn ${s === 'M' ? 'is-on' : ''}" data-size="${s}">${s}</button>`).join('')}
+        </div>
+        <button class="link-arrow" id="qvSizeGuide" style="margin-top:14px;font-size:.54rem">Size guide
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+
+      <div class="qv__block">
+        <span class="qv__label">Colour</span>
+        <div class="colors" id="qvColors">
+          ${p.colors.map((c, i) => `<button class="color-dot ${i === 0 ? 'is-on' : ''}" data-color="${c}" style="background:${c}" aria-label="Colour ${i + 1}"></button>`).join('')}
+        </div>
+      </div>
+
+      <div class="qv__block" style="border-top:1px solid rgba(198,166,107,.14);padding-top:18px">
+        <p class="qv__text" style="font-size:.78rem">Questions? Chat with us — we reply within 2 hours, 8am–8pm.</p>
+      </div>
+    `;
+
+    body.querySelectorAll('.qv__thumb').forEach((t, i) => {
+      t.addEventListener('click', () => {
+        body.querySelectorAll('.qv__thumb').forEach(x => x.classList.remove('is-on'));
+        t.classList.add('is-on');
+        const main = $('#qvMain');
+        main.innerHTML = `<div class="img"><img src="${i === 0 ? p.img : p.img2}" alt="${p.name}" loading="eager"></div>`;
+      });
+    });
+
+    body.querySelectorAll('#qvSizes .size-btn').forEach(b => {
+      b.addEventListener('click', () => {
+        body.querySelectorAll('#qvSizes .size-btn').forEach(x => x.classList.remove('is-on'));
+        b.classList.add('is-on');
+        quickState.size = b.dataset.size;
+      });
+    });
+
+    body.querySelectorAll('#qvColors .color-dot').forEach(b => {
+      b.addEventListener('click', () => {
+        body.querySelectorAll('#qvColors .color-dot').forEach(x => x.classList.remove('is-on'));
+        b.classList.add('is-on');
+        quickState.color = b.dataset.color;
+      });
+    });
+
+    $('#qvSizeGuide').addEventListener('click', openSizeGuide);
+
+    $('#quickWA').onclick = e => {
+      e.preventDefault();
+      window.open(waLink(`Hi JD COUTURE, I'm interested in the *${p.name}* (${money(p.price)}).\nSize: ${quickState.size}\nCould you tell me more?`), '_blank', 'noopener');
+    };
+
+    openDrawer('quickDrawer');
+  }
+
+  function quickAdd() {
+    if (!quickState.id) return;
+    addToBasket(quickState.id, quickState.size, quickState.color);
+    closeAll();
+  }
+
+  /* ============================================================
+     DRAWERS / MODALS
+     ============================================================ */
+  const scrim = $('#scrim');
+
+  function openDrawer(id) {
+    closeAll(true);
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.add('is-open');
+    el.setAttribute('aria-hidden', 'false');
+    scrim.classList.add('is-open');
+    document.body.classList.add('is-locked');
+  }
+
+  function closeAll(silent) {
+    ['basketDrawer', 'wishDrawer', 'quickDrawer'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) { el.classList.remove('is-open'); el.setAttribute('aria-hidden', 'true'); }
+    });
+    const sm = $('#sizeModal');
+    if (sm) sm.classList.remove('is-open');
+    const lb = $('#lightbox');
+    if (lb) { lb.classList.remove('is-open'); lb.setAttribute('aria-hidden', 'true'); }
+    scrim.classList.remove('is-open');
+    if (!silent) document.body.classList.remove('is-locked');
+  }
+
+  function openSizeGuide() {
+    closeAll(true);
+    scrim.classList.add('is-open');
+    const m = $('#sizeModal');
+    if (m) m.classList.add('is-open');
+    document.body.classList.add('is-locked');
+  }
+
+  function initOverlays() {
+    scrim.addEventListener('click', () => closeAll());
+    document.addEventListener('click', e => {
+      if (e.target.closest('[data-close]')) { e.preventDefault(); closeAll(); }
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAll(); });
+
+    const basketBtn = $('#basketBtn');
+    if (basketBtn) basketBtn.addEventListener('click', () => { renderBasket(); openDrawer('basketDrawer'); });
+    const wishBtn = $('#wishBtn');
+    if (wishBtn) wishBtn.addEventListener('click', () => { renderWishlist(); openDrawer('wishDrawer'); });
+    const quickAddBtn = $('#quickAdd');
+    if (quickAddBtn) quickAddBtn.addEventListener('click', quickAdd);
+
+    const basketClear = $('#basketClear');
+    if (basketClear) basketClear.addEventListener('click', () => {
+      basket = []; saveBasket(); updateBadges(); renderBasket(); toast('Basket cleared');
+    });
+
+    const checkout = $('#basketCheckout');
+    if (checkout) checkout.addEventListener('click', e => {
+      e.preventDefault();
+      if (!basket.length) { toast('Your basket is empty'); return; }
+      window.open(waLink(basketMessage()), '_blank', 'noopener');
+    });
+
+    const wishShare = $('#wishShare');
+    if (wishShare) wishShare.addEventListener('click', e => {
+      e.preventDefault();
+      if (!wishlist.length) { toast('Your wishlist is empty'); return; }
+      const lines = ['*MY WISHLIST — JD COUTURE*', ''];
+      wishlist.forEach(id => { const p = getProduct(id); if (p) lines.push(`• ${p.name} — ${money(p.price)}`); });
+      window.open(waLink(lines.join('\n')), '_blank', 'noopener');
+    });
+
+    const footerSG = $('#footerSizeGuide');
+    if (footerSG) footerSG.addEventListener('click', e => { e.preventDefault(); openSizeGuide(); });
+  }
+
+  /* ============================================================
+     MOBILE MENU
+     ============================================================ */
+  function closeMenu() {
+    const m = $('#mmenu');
+    const b = $('#burger');
+    if (m) m.classList.remove('is-open');
+    if (b) { b.classList.remove('is-open'); b.setAttribute('aria-expanded', 'false'); }
+    document.body.classList.remove('is-locked');
+  }
+
+  function initMenu() {
+    const burger = $('#burger');
+    if (!burger) return;
+    burger.addEventListener('click', () => {
+      const open = !$('#mmenu').classList.contains('is-open');
+      $('#mmenu').classList.toggle('is-open', open);
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      document.body.classList.toggle('is-locked', open);
+    });
+    $$('.mmenu__list a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+
+  /* ============================================================
+     SMOOTH ANCHORS
+     ============================================================ */
+  function initAnchors() {
+    document.addEventListener('click', e => {
+      const link = e.target.closest('a[href^="#"]');
+      if (!link) return;
+      const href = link.getAttribute('href');
+      if (!href || href === '#' || href.length < 2) return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      const offset = 70;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  }
+
+  /* ============================================================
+     BOOT
+     ============================================================ */
+  function boot() {
+    const y = $('#year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    initPreloader();
+    initHero();
+    initScrollChrome();
+    initReveals();
+    renderChapterPills();
+    renderLookbook();
+    initLightbox();
+    initFabric();
+    initHotspots();
+    initInstagram();
+    initOverlays();
+    initMenu();
+    initAnchors();
+
+    updateBadges();
+    renderBasket();
+    renderWishlist();
+
+    setTimeout(() => {
+      if ($('#preloader')) return;
+      document.body.classList.remove('is-locked');
+    }, 2400);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+
+})();
+</script>
+</body>
+</html>
